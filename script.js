@@ -20,14 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.innerHTML = '<i class="fas fa-globe"></i><span>SW</span>';
             }
             
-            // Save preference to localStorage
             localStorage.setItem('salooni-language', isEnglish ? 'en' : 'sw');
         });
         
-        // Load saved language preference
         const savedLang = localStorage.getItem('salooni-language');
         if (savedLang === 'sw') {
-            languageSwitcher.click(); // Trigger switch to Swahili
+            languageSwitcher.click();
         }
     }
     
@@ -43,43 +41,47 @@ document.addEventListener('DOMContentLoaded', function() {
                 : '<i class="fas fa-bars"></i>';
         });
         
-        // Close mobile menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                if (mobileToggle) {
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
             });
         });
     }
     
     // Header Scroll Effect
     const header = document.querySelector('.header');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
+    
+    // Explore Services Button
+    const exploreButtons = document.querySelectorAll('.cta-button');
+    exploreButtons.forEach(button => {
+        if (button.textContent.includes('Explore Services') || button.textContent.includes('Chunguza Huduma')) {
+            button.addEventListener('click', function() {
+                window.location.href = 'categories.html';
+            });
         }
     });
     
-    // Active Navigation Link
-    const currentPage = window.location.pathname.split('/').pop();
-    const navLinksAll = document.querySelectorAll('.nav-links a');
-    
-    navLinksAll.forEach(link => {
-        const linkPage = link.getAttribute('href');
-        if (linkPage === currentPage || 
-            (currentPage === '' && linkPage === 'index.html') ||
-            (currentPage === 'index.html' && linkPage === '.')) {
-            link.classList.add('active');
-        }
-        
-        // Update href for proper navigation between pages
-        if (!link.getAttribute('href').startsWith('#')) {
-            link.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== currentPage) {
-                    e.preventDefault();
-                    window.location.href = this.getAttribute('href');
+    // Become a Pro Button
+    const becomeProButtons = document.querySelectorAll('.secondary-button');
+    becomeProButtons.forEach(button => {
+        if (button.textContent.includes('Become a Pro') || button.textContent.includes('Kuwa Mtaalamu')) {
+            button.addEventListener('click', function() {
+                if (isEnglish) {
+                    alert('✨ Join our professional community! Please visit the "Contact" page to apply as a beauty professional.');
+                } else {
+                    alert('✨ Jiunge na jamii yetu ya wataalamu! Tafadhali tembelea ukurasa wa "Mawasiliano" kwa kuomba kuwa mtaalamu wa urembo.');
                 }
             });
         }
@@ -115,9 +117,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Category Card Hover Effects
+    // Category Card Click to Navigate
     const categoryCards = document.querySelectorAll('.category-card');
     categoryCards.forEach(card => {
+        card.addEventListener('click', function() {
+            window.location.href = 'categories.html';
+        });
+        
+        // Hover Effects
         card.addEventListener('mouseenter', function() {
             const icon = this.querySelector('.category-icon');
             if (icon) {
@@ -133,35 +140,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Feature Card Hover Effects
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            const icon = this.querySelector('.feature-icon');
+            if (icon) {
+                icon.style.transform = 'scale(1.05)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            const icon = this.querySelector('.feature-icon');
+            if (icon) {
+                icon.style.transform = 'scale(1)';
+            }
+        });
+    });
+    
     // Initialize with English visible
     if (englishElements.length > 0) {
         swahiliElements.forEach(el => el.style.display = 'none');
     }
     
-    // Add decorative gold elements dynamically
-    function addGoldElements() {
-        const heroSection = document.querySelector('.hero');
-        if (heroSection) {
-            for (let i = 0; i < 5; i++) {
-                const goldDot = document.createElement('div');
-                goldDot.className = 'gold-dot';
-                goldDot.style.cssText = `
-                    position: absolute;
-                    width: 3px;
-                    height: 3px;
-                    background: var(--gold);
-                    border-radius: 50%;
-                    opacity: 0.5;
-                    z-index: -1;
-                `;
-                goldDot.style.left = `${Math.random() * 100}%`;
-                goldDot.style.top = `${Math.random() * 100}%`;
-                heroSection.appendChild(goldDot);
+    // FAQ Functionality (for contact page)
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (question) {
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
             }
-        }
+        });
     }
-    
-    addGoldElements();
     
     // Page transition effect
     document.body.style.opacity = '0';
