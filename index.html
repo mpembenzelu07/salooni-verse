@@ -38,9 +38,11 @@
                         <span class="english">Download App</span>
                         <span class="swahili">Pakua Programu</span>
                     </button>
-                    <div class="mobile-toggle" id="mobileToggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -49,46 +51,35 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-subtitle">
-                        <span class="english">Luxury Beauty Platform</span>
-                        <span class="swahili">Jukwaa la Urembo la Kifahari</span>
-                    </div>
-                    
-                    <h1 class="hero-title">
-                        <span class="english">Your Beauty Universe in Tanzania</span>
-                        <span class="swahili">Ulimwengu Wako wa Urembo Tanzania</span>
-                    </h1>
-                    
-                    <p class="hero-description">
-                        <span class="english">Experience the ultimate beauty marketplace connecting you with Tanzania's finest professionals. Book hairstylists, makeup artists, nail technicians, and more in our luxurious, seamless platform.</span>
-                        <span class="swahili">Pata uzoefu wa soko bora la urembo linalokuunganisha na wataalamu bora wa Tanzania. Panga wakinyozi, wasanii wa make-up, wataalamu wa kucha, na zaidi katika jukwaa letu la kifahari na laini.</span>
-                    </p>
-                    
-                    <div class="hero-buttons">
-                        <button class="cta-button" id="exploreServices">
-                            <i class="fas fa-sparkles"></i>
-                            <span class="english">Explore Services</span>
-                            <span class="swahili">Chunguza Huduma</span>
-                        </button>
-                        <button class="secondary-button" id="becomePro">
-                            <span class="english">Become a Pro</span>
-                            <span class="swahili">Kuwa Mtaalamu</span>
-                        </button>
-                    </div>
+            <div class="section-title">
+                <div class="section-subtitle">
+                    <span class="english">Luxury Beauty Platform</span>
+                    <span class="swahili">Jukwaa la Urembo la Kifahari</span>
                 </div>
-                
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Salooni Verse Beauty Services">
-                    <div class="hero-decoration"></div>
+                <h1 class="section-main-title">
+                    <span class="english">Your Beauty Universe in Tanzania</span>
+                    <span class="swahili">Ulimwengu Wako wa Urembo Tanzania</span>
+                </h1>
+                <p class="section-description">
+                    <span class="english">Experience the ultimate beauty marketplace connecting you with Tanzania's finest professionals. Book hairstylists, makeup artists, nail technicians, and more.</span>
+                    <span class="swahili">Pata uzoefu wa soko bora la urembo linalokuunganisha na wataalamu bora Tanzania. Panga wakinyozi, wasanii wa make-up, wataalamu wa kucha, na zaidi.</span>
+                </p>
+                <div style="margin-top: 40px;">
+                    <button class="cta-button" style="margin-right: 15px; background: transparent; border: 2px solid var(--gold); color: var(--gold);">
+                        <span class="english">Explore Services</span>
+                        <span class="swahili">Gundua Huduma</span>
+                    </button>
+                    <button class="cta-button">
+                        <span class="english">Become a Pro</span>
+                        <span class="swahili">Kuwa Mtaalamu</span>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="section">
+    <!-- Features Preview -->
+    <section class="section" style="padding: 100px 0;">
         <div class="container">
             <div class="section-title">
                 <div class="section-subtitle">
@@ -97,210 +88,55 @@
                 </div>
                 <h2 class="section-main-title">
                     <span class="english">Luxury Beauty Categories</span>
-                    <span class="swahili">Aina za Urembo za Kifahari</span>
+                    <span class="swahili">Aina za Urembo wa Kifahari</span>
                 </h2>
                 <p class="section-description">
                     <span class="english">Discover our curated selection of premium beauty services tailored for the modern Tanzanian woman.</span>
-                    <span class="swahili">Gundua uteuzi wetu wa huduma za urembo za hali ya juu zilizobinafsishwa kwa mwanamke wa kisasa wa Tanzania.</span>
-                </p>
-            </div>
-            
-            <div class="categories-grid">
-                <!-- Hair & Haircare -->
-                <a href="categories.html" class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-cut"></i>
-                    </div>
-                    <h3 class="category-title">
-                        <span class="english">Hair & Haircare</span>
-                        <span class="swahili">Nywele na Utunzaji</span>
-                    </h3>
-                    <p class="category-description">
-                        <span class="english">From salon stylists to street braiders, experience premium hair services.</span>
-                        <span class="swahili">Kutoka kwa wakinyozi wa saluni hadi wapiga msokoto wa mitaani, pata huduma za hali ya juu za nywele.</span>
-                    </p>
-                    <div class="service-tags">
-                        <span class="service-tag english">Styling</span>
-                        <span class="service-tag english">Braiding</span>
-                        <span class="service-tag english">Treatment</span>
-                        <span class="service-tag swahili">Mitindo</span>
-                        <span class="service-tag swahili">Msokoto</span>
-                        <span class="service-tag swahili">Matibabu</span>
-                    </div>
-                </a>
-                
-                <!-- Makeup & Facial -->
-                <a href="categories.html" class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3 class="category-title">
-                        <span class="english">Makeup & Facial</span>
-                        <span class="swahili">Make-up na Uso</span>
-                    </h3>
-                    <p class="category-description">
-                        <span class="english">Professional makeup artists for every occasion, from bridal to editorial.</span>
-                        <span class="swahili">Wasanii wa make-up wa kikazi kwa kila hafla, kutoka harusi hadi kihistoria.</span>
-                    </p>
-                    <div class="service-tags">
-                        <span class="service-tag english">Bridal</span>
-                        <span class="service-tag english">Events</span>
-                        <span class="service-tag english">Artistry</span>
-                        <span class="service-tag swahili">Harusi</span>
-                        <span class="service-tag swahili">Hafla</span>
-                        <span class="service-tag swahili">Usanii</span>
-                    </div>
-                </a>
-                
-                <!-- Skincare & Wellness -->
-                <a href="categories.html" class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-spa"></i>
-                    </div>
-                    <h3 class="category-title">
-                        <span class="english">Skincare & Wellness</span>
-                        <span class="swahili">Utunzaji wa Ngozi na Ustawi</span>
-                    </h3>
-                    <p class="category-description">
-                        <span class="english">Rejuvenating treatments and organic products for radiant skin.</span>
-                        <span class="swahili">Matibabu ya kufufua na bidhaa za asili kwa ngozi inayong'aa.</span>
-                    </p>
-                    <div class="service-tags">
-                        <span class="service-tag english">Facials</span>
-                        <span class="service-tag english">Treatments</span>
-                        <span class="service-tag english">Wellness</span>
-                        <span class="service-tag swahili">Facial</span>
-                        <span class="service-tag swahili">Matibabu</span>
-                        <span class="service-tag swahili">Ustawi</span>
-                    </div>
-                </a>
-            </div>
-            
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="categories.html" class="secondary-button">
-                    <span class="english">View All Categories</span>
-                    <span class="swahili">Angalia Aina Zote</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="section" style="background: rgba(212, 175, 55, 0.02);">
-        <div class="container">
-            <div class="section-title">
-                <div class="section-subtitle">
-                    <span class="english">Why Choose Us</span>
-                    <span class="swahili">Kwa Nini Kuchagua Sisi</span>
-                </div>
-                <h2 class="section-main-title">
-                    <span class="english">Exclusive Features</span>
-                    <span class="swahili">Vipengele Vya Kipekee</span>
-                </h2>
-                <p class="section-description">
-                    <span class="english">Experience beauty redefined with our innovative platform features.</span>
-                    <span class="swahili">Pata urembo ulioboreshwa na vipengele vyya jukwaa letu la ubunifu.</span>
+                    <span class="swahili">Gundua uteuzi wetu wa huduma za urembo za hali ya juu zilizotengenezwa kwa mwanamke wa kisasa wa Tanzania.</span>
                 </p>
             </div>
             
             <div class="features-grid">
-                <!-- Virtual Try-On -->
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-vr-cardboard"></i>
+                        <i class="fas fa-cut"></i>
                     </div>
                     <h3 class="feature-title">
-                        <span class="english">Virtual Try-On</span>
-                        <span class="swahili">Kujaribu Mtandaoni</span>
+                        <span class="english">Hair Styling</span>
+                        <span class="swahili">Mitindo ya Nywele</span>
                     </h3>
                     <p class="feature-description">
-                        <span class="english">Try hairstyles, makeup, and nail designs virtually before booking with our AI-powered tool.</span>
-                        <span class="swahili">Jaribu mitindo ya nywele, make-up, na miundo ya kucha mtandaoni kabla ya kufanya maagizo kwa zana yetu yenye nguvu ya AI.</span>
+                        <span class="english">Professional hairstylists for all hair types and styles.</span>
+                        <span class="swahili">Wakinyozi wa kitaalamu kwa aina zote za nywele na mitindo.</span>
                     </p>
-                    <div class="feature-benefits">
-                        <span class="benefit-tag english">AI-Powered</span>
-                        <span class="benefit-tag english">Style Matching</span>
-                        <span class="benefit-tag swahili">AI Yenye Nguvu</span>
-                        <span class="benefit-tag swahili">Kulinganisha Mitindo</span>
-                    </div>
                 </div>
                 
-                <!-- Premium Professionals -->
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-gem"></i>
+                        <i class="fas fa-paint-brush"></i>
                     </div>
                     <h3 class="feature-title">
-                        <span class="english">Premium Professionals</span>
-                        <span class="swahili">Wataalamu wa Hali ya Juu</span>
+                        <span class="english">Makeup Artists</span>
+                        <span class="swahili">Wasanii wa Make-up</span>
                     </h3>
                     <p class="feature-description">
-                        <span class="english">Connect with verified, top-rated beauty professionals across Tanzania.</span>
-                        <span class="swahili">Ungana na wataalamu wa urembo walioidhinishwa, walio na ukadiriaji wa juu nchini Tanzania.</span>
+                        <span class="english">Expert makeup for weddings, events, and daily glam.</span>
+                        <span class="swahili">Make-up ya kitaalamu kwa harusi, hafla, na urembo wa kila siku.</span>
                     </p>
-                    <div class="feature-benefits">
-                        <span class="benefit-tag english">Verified</span>
-                        <span class="benefit-tag english">Top-Rated</span>
-                        <span class="benefit-tag swahili">Imethibitishwa</span>
-                        <span class="benefit-tag swahili">Ukadiriaji wa Juu</span>
-                    </div>
                 </div>
                 
-                <!-- Home Service Luxury -->
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-hand-sparkles"></i>
                     </div>
                     <h3 class="feature-title">
-                        <span class="english">Home Service Luxury</span>
-                        <span class="swahili">Huduma ya Nyumbani ya Kifahari</span>
+                        <span class="english">Nail Services</span>
+                        <span class="swahili">Huduma za Kucha</span>
                     </h3>
                     <p class="feature-description">
-                        <span class="english">Enjoy premium beauty services in the comfort of your home with real-time tracking.</span>
-                        <span class="swahili">Furahia huduma za urembo za hali ya juu katika faraja ya nyumba yako kwa ufuatiliaji wa wakati halisi.</span>
+                        <span class="english">Manicures, pedicures, and nail art by top technicians.</span>
+                        <span class="swahili">Manicure, pedicure, na sanaa ya kucha na wataalamu bora.</span>
                     </p>
-                    <div class="feature-benefits">
-                        <span class="benefit-tag english">Convenience</span>
-                        <span class="benefit-tag english">Real-Time</span>
-                        <span class="benefit-tag swahili">Urahisi</span>
-                        <span class="benefit-tag swahili">Wakati Halisi</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="features.html" class="secondary-button">
-                    <span class="english">Explore All Features</span>
-                    <span class="swahili">Chunguza Vipengele Vyote</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section" style="padding: 80px 0;">
-        <div class="container">
-            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05)); border-radius: var(--radius); padding: 60px; text-align: center;">
-                <h2 style="font-size: 36px; margin-bottom: 20px; color: var(--white);">
-                    <span class="english">Ready to Experience Luxury Beauty?</span>
-                    <span class="swahili">Uko Tayari Kufurahia Urembo wa Kifahari?</span>
-                </h2>
-                <p style="color: var(--gray); margin-bottom: 30px; font-size: 18px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    <span class="english">Join thousands of satisfied clients and professionals in Tanzania's premier beauty marketplace.</span>
-                    <span class="swahili">Jiunge na maelfu ya wateja na wataalamu waliyoridhika katika soko kuu la urembo Tanzania.</span>
-                </p>
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <button class="cta-button" id="joinNow">
-                        <i class="fas fa-user-plus"></i>
-                        <span class="english">Join Now</span>
-                        <span class="swahili">Jiunge Sasa</span>
-                    </button>
-                    <button class="secondary-button" id="learnMore">
-                        <span class="english">Learn More</span>
-                        <span class="swahili">Jifunze Zaidi</span>
-                    </button>
                 </div>
             </div>
         </div>
@@ -313,8 +149,8 @@
                 <div class="footer-column">
                     <h3>Salooni Verse</h3>
                     <p style="margin-bottom: 20px; color: #ccc;">
-                        <span class="english">Your luxury beauty universe in Tanzania. Connecting discerning clients with premium beauty professionals.</span>
-                        <span class="swahili">Ulimwengu wako wa urembo wa kifahari Tanzania. Kuunganisha wateja wanaotambua na wataalamu wa urembo wa hali ya juu.</span>
+                        <span class="english">Your luxury beauty universe in Tanzania.</span>
+                        <span class="swahili">Ulimwengu wako wa urembo wa kifahari Tanzania.</span>
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -340,24 +176,10 @@
                 
                 <div class="footer-column">
                     <h3>
-                        <span class="english">Services</span>
-                        <span class="swahili">Huduma</span>
-                    </h3>
-                    <ul class="footer-links">
-                        <li><a href="categories.html"><i class="fas fa-chevron-right"></i> <span class="english">Hair Services</span><span class="swahili">Huduma za Nywele</span></a></li>
-                        <li><a href="categories.html"><i class="fas fa-chevron-right"></i> <span class="english">Makeup Artistry</span><span class="swahili">Usanii wa Make-up</span></a></li>
-                        <li><a href="categories.html"><i class="fas fa-chevron-right"></i> <span class="english">Nail Design</span><span class="swahili">Ubunifu wa Kucha</span></a></li>
-                        <li><a href="categories.html"><i class="fas fa-chevron-right"></i> <span class="english">Skincare</span><span class="swahili">Utunzaji wa Ngozi</span></a></li>
-                        <li><a href="categories.html"><i class="fas fa-chevron-right"></i> <span class="english">Bridal Packages</span><span class="swahili">Vifurushi vya Harusi</span></a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>
                         <span class="english">Contact Info</span>
                         <span class="swahili">Taarifa za Mawasiliano</span>
                     </h3>
-                    <div class="info-card" style="margin-bottom: 20px;">
+                    <div class="info-card">
                         <div class="info-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
@@ -367,18 +189,6 @@
                                 <span class="swahili">Eneo</span>
                             </h4>
                             <p style="color: #ccc;">Dar es Salaam, Tanzania</p>
-                        </div>
-                    </div>
-                    <div class="info-card" style="margin-bottom: 20px;">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>
-                                <span class="english">Phone</span>
-                                <span class="swahili">Simu</span>
-                            </h4>
-                            <p style="color: #ccc;">+255 123 456 789</p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -398,8 +208,8 @@
             
             <div class="footer-bottom">
                 <p>
-                    <span class="english">&copy; 2023 Salooni Verse. All rights reserved. | Luxury Beauty Universe for Tanzania</span>
-                    <span class="swahili">&copy; 2023 Salooni Verse. Haki zote zimehifadhiwa. | Ulimwengu wa Urembo wa Kifahari kwa Tanzania</span>
+                    <span class="english">&copy; 2023 Salooni Verse. All rights reserved.</span>
+                    <span class="swahili">&copy; 2023 Salooni Verse. Haki zote zimehifadhiwa.</span>
                 </p>
             </div>
         </div>
