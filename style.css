@@ -1,4 +1,4 @@
-/* style.css - Luxury Black & Gold Theme for Salooni Verse */
+/* SALOONI VERSE - Luxury Black & Gold Theme */
 :root {
     --black: #000000;
     --dark: #0A0A0A;
@@ -17,6 +17,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -45,6 +49,7 @@ p, a, button, input, textarea {
         var(--black);
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 .luxury-bg::before {
@@ -173,6 +178,7 @@ p, a, button, input, textarea {
     align-items: center;
     gap: 8px;
     transition: var(--transition);
+    font-weight: 600;
 }
 
 .language-switcher:hover {
@@ -211,6 +217,8 @@ p, a, button, input, textarea {
     font-size: 24px;
     color: var(--gold);
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 /* Hero Section */
@@ -364,6 +372,9 @@ p, a, button, input, textarea {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    display: block;
+    color: inherit;
 }
 
 .category-card::before {
@@ -656,6 +667,7 @@ textarea.form-control {
     background: rgba(10, 10, 10, 0.95);
     border-top: 1px solid rgba(212, 175, 55, 0.1);
     padding: 60px 0 30px;
+    margin-top: 100px;
 }
 
 .footer-content {
@@ -713,9 +725,139 @@ textarea.form-control {
     font-size: 14px;
 }
 
-/* Language Toggle */
+/* Language Toggle - PERFECT BILINGUAL */
+.english {
+    display: block;
+}
+
 .swahili {
     display: none;
+}
+
+/* Show Swahili when language is Swahili */
+body.swahili-active .english {
+    display: none;
+}
+
+body.swahili-active .swahili {
+    display: block;
+}
+
+/* Special styles for Swahili language */
+body.swahili-active .language-switcher {
+    background: rgba(212, 175, 55, 0.2);
+}
+
+body.swahili-active .language-switcher .lang-text {
+    content: 'SW';
+}
+
+/* Service Tags */
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.service-tag {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.category-card:hover .service-tag {
+    background: rgba(212, 175, 55, 0.2);
+}
+
+/* Feature Benefits */
+.feature-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.benefit-tag {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* FAQ */
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: var(--radius);
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.faq-question h4 {
+    color: var(--white);
+    font-size: 18px;
+    margin: 0;
+}
+
+.faq-question i {
+    color: var(--gold);
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 30px 25px;
+    max-height: 300px;
+}
+
+.faq-answer p {
+    color: var(--gray);
+    margin-top: 10px;
+}
+
+/* Page Content */
+.page-content {
+    padding: 150px 0 80px;
+    min-height: 70vh;
 }
 
 /* Responsive Design */
@@ -748,6 +890,7 @@ textarea.form-control {
         padding: 20px;
         gap: 20px;
         border-top: 1px solid rgba(212, 175, 55, 0.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
     
     .nav-links.active {
@@ -760,6 +903,10 @@ textarea.form-control {
     
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+        font-size: 48px;
     }
 }
 
@@ -788,6 +935,10 @@ textarea.form-control {
     .contact-form {
         padding: 30px;
     }
+    
+    .header-right {
+        gap: 15px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -801,5 +952,14 @@ textarea.form-control {
     
     .category-card, .feature-card {
         padding: 30px 20px;
+    }
+    
+    .logo-text {
+        font-size: 24px;
+    }
+    
+    .cta-button, .secondary-button {
+        padding: 10px 20px;
+        font-size: 13px;
     }
 }
