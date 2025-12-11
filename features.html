@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Features - Salooni Verse</title>
+    <title>Features - Salooni Verse</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -29,16 +29,16 @@
                 </ul>
                 
                 <div class="header-right">
-                    <div class="language-switcher">
+                    <div class="language-switcher" id="languageSwitcher">
                         <i class="fas fa-globe"></i>
-                        <span>EN</span>
+                        <span class="lang-text">EN</span>
                     </div>
-                    <button class="cta-button">
+                    <button class="cta-button" id="downloadApp">
                         <i class="fas fa-download"></i>
                         <span class="english">Download App</span>
                         <span class="swahili">Pakua Programu</span>
                     </button>
-                    <div class="mobile-toggle">
+                    <div class="mobile-toggle" id="mobileToggle">
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
@@ -50,249 +50,256 @@
     <section class="hero" style="padding: 180px 0 80px;">
         <div class="container">
             <div class="section-title">
-                <div class="section-subtitle english">Innovation & Luxury</div>
-                <div class="section-subtitle swahili">Ubunifu na Anasa</div>
-                <h2 class="section-main-title english">Exclusive Platform Features</h2>
-                <h2 class="section-main-title swahili">Vipengele Vya Kipekee vya Jukwaa</h2>
-                <p class="section-description english">
-                    Discover what makes Salooni Verse the most sophisticated beauty platform in Tanzania.
-                </p>
-                <p class="section-description swahili">
-                    Gundua kinachofanya Salooni Verse kuwa jukwaa la urembo lenye ustadi zaidi Tanzania.
+                <div class="section-subtitle">
+                    <span class="english">Innovation & Luxury</span>
+                    <span class="swahili">Ubunifu na Anasa</span>
+                </div>
+                <h2 class="section-main-title">
+                    <span class="english">Exclusive Platform Features</span>
+                    <span class="swahili">Vipengele Vya Kipekee vya Jukwaa</span>
+                </h2>
+                <p class="section-description">
+                    <span class="english">Discover what makes Salooni Verse the most sophisticated beauty platform in Tanzania.</span>
+                    <span class="swahili">Gundua kinachofanya Salooni Verse kuwa jukwaa la urembo lenye ustadi zaidi Tanzania.</span>
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Main Features -->
+    <!-- All Features -->
     <section class="section">
         <div class="container">
             <div class="features-grid">
-                <!-- Feature 1 -->
+                <!-- Virtual Try-On -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-vr-cardboard"></i>
                     </div>
-                    <h3 class="feature-title english">Virtual Try-On</h3>
-                    <h3 class="feature-title swahili">Kujaribu Mtandaoni</h3>
-                    <p class="feature-description english">
-                        Try hairstyles, makeup, and nail designs virtually before booking. AI-based tool suggests styles based on face shape, skin tone, and preferences.
-                    </p>
-                    <p class="feature-description swahili">
-                        Jaribu mitindo ya nywele, make-up, na miundo ya kucha mtandaoni kabla ya kufanya maagizo. Zana ya msingi wa AI inapendekeza mitindo kulingana na umbo la uso, rangi ya ngozi, na mapendeleo.
+                    <h3 class="feature-title">
+                        <span class="english">Virtual Try-On</span>
+                        <span class="swahili">Kujaribu Mtandaoni</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Try hairstyles, makeup, and nail designs virtually before booking. AI-based tool suggests styles based on face shape, skin tone, and preferences.</span>
+                        <span class="swahili">Jaribu mitindo ya nywele, make-up, na miundo ya kucha mtandaoni kabla ya kufanya maagizo. Zana ya msingi wa AI inapendekeza mitindo kulingana na umbo la uso, rangi ya ngozi, na mapendeleo.</span>
                     </p>
                     <div class="feature-benefits">
                         <span class="benefit-tag english">AI-Powered</span>
                         <span class="benefit-tag english">Style Matching</span>
                         <span class="benefit-tag english">Virtual Preview</span>
+                        <span class="benefit-tag swahili">AI Yenye Nguvu</span>
+                        <span class="benefit-tag swahili">Kulinganisha Mitindo</span>
+                        <span class="benefit-tag swahili">Kuangalia Mtandaoni</span>
                     </div>
                 </div>
                 
-                <!-- Feature 2 -->
+                <!-- Street Stylist Spotlight -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-street-view"></i>
                     </div>
-                    <h3 class="feature-title english">Street Stylist Spotlight</h3>
-                    <h3 class="feature-title swahili">Mwangaza wa Wakinyozi wa Mitaani</h3>
-                    <p class="feature-description english">
-                        Special category highlighting talented street hairstylists and independent beauty professionals. Helps them reach clients who may otherwise not find them.
-                    </p>
-                    <p class="feature-description swahili">
-                        Aina maalum inayowatambua wakinyozi wenye vipaji wa mitaani na wataalamu huru wa urembo. Inawasaidia kufikia wateja ambao wangeweza kukosa kuwapata.
+                    <h3 class="feature-title">
+                        <span class="english">Street Stylist Spotlight</span>
+                        <span class="swahili">Mwangaza wa Wakinyozi wa Mitaani</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Special category highlighting talented street hairstylists and independent beauty professionals. Helps them reach clients who may otherwise not find them.</span>
+                        <span class="swahili">Aina maalum inayowatambua wakinyozi wenye vipaji wa mitaani na wataalamu huru wa urembo. Inawasaidia kufikia wateja ambao wangeweza kukosa kuwapata.</span>
                     </p>
                     <div class="feature-benefits">
                         <span class="benefit-tag english">Talent Discovery</span>
                         <span class="benefit-tag english">Local Empowerment</span>
                         <span class="benefit-tag english">Community Support</span>
+                        <span class="benefit-tag swahili">Kugundua Vipaji</span>
+                        <span class="benefit-tag swahili">Kuwawezesha Wenyeji</span>
+                        <span class="benefit-tag swahili">Msaada wa Jamii</span>
                     </div>
                 </div>
                 
-                <!-- Feature 3 -->
+                <!-- Skill Tutorials & Courses -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 class="feature-title english">Skill Tutorials & Courses</h3>
-                    <h3 class="feature-title swahili">Mafunzo ya Ujuzi na Kozi</h3>
-                    <p class="feature-description english">
-                        Professionals can upload tutorials or paid courses for clients or other artists. Provides additional revenue streams and encourages skill development.
-                    </p>
-                    <p class="feature-description swahili">
-                        Wataalamu wanaweza kupakia mafunzo au kozi za malipo kwa wateja au wasanii wengine. Hutoa vyanzo vya mapato ya ziada na kuhimiza ukuzaji wa ujuzi.
+                    <h3 class="feature-title">
+                        <span class="english">Skill Tutorials & Courses</span>
+                        <span class="swahili">Mafunzo ya Ujuzi na Kozi</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Professionals can upload tutorials or paid courses for clients or other artists. Provides additional revenue streams and encourages skill development.</span>
+                        <span class="swahili">Wataalamu wanaweza kupakia mafunzo au kozi za malipo kwa wateja au wasanii wengine. Hutoa vyanzo vya mapato ya ziada na kuhimiza ukuzaji wa ujuzi.</span>
                     </p>
                     <div class="feature-benefits">
                         <span class="benefit-tag english">Education</span>
                         <span class="benefit-tag english">Skill Growth</span>
                         <span class="benefit-tag english">Revenue Streams</span>
+                        <span class="benefit-tag swahili">Elimu</span>
+                        <span class="benefit-tag swahili">Ukuaji wa Ujuzi</span>
+                        <span class="benefit-tag swahili">Vyanzo vya Mapato</span>
                     </div>
                 </div>
                 
-                <!-- Feature 4 -->
+                <!-- Trend Tracker & Inspiration -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="feature-title english">Trend Tracker & Inspiration</h3>
-                    <h3 class="feature-title swahili">Kufuatilia Mienendo na Ushauri</h3>
-                    <p class="feature-description english">
-                        Stay updated with trending hairstyles, makeup, nail art, and skincare routines. Save and share styles with your favorite stylists.
-                    </p>
-                    <p class="feature-description swahili">
-                        Kaa sasa na mitindo ya nywele, make-up, sanaa ya kucha, na mazoea ya utunzaji wa ngozi. Hifadhi na shiriki mitindo na wakinyozi wapendwa wako.
+                    <h3 class="feature-title">
+                        <span class="english">Trend Tracker & Inspiration</span>
+                        <span class="swahili">Kufuatilia Mienendo na Ushauri</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Stay updated with trending hairstyles, makeup, nail art, and skincare routines. Save and share styles with your favorite stylists.</span>
+                        <span class="swahili">Kaa sasa na mitindo ya nywele, make-up, sanaa ya kucha, na mazoea ya utunzaji wa ngozi. Hifadhi na shiriki mitindo na wakinyozi wapendwa wako.</span>
                     </p>
                     <div class="feature-benefits">
                         <span class="benefit-tag english">Trend Updates</span>
                         <span class="benefit-tag english">Style Inspiration</span>
                         <span class="benefit-tag english">Community Sharing</span>
+                        <span class="benefit-tag swahili">Sasisho la Mienendo</span>
+                        <span class="benefit-tag swahili">Ushauri wa Mitindo</span>
+                        <span class="benefit-tag swahili">Kushiriki kwa Jamii</span>
                     </div>
                 </div>
                 
-                <!-- Feature 5 -->
+                <!-- Loyalty & Rewards System -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-gift"></i>
                     </div>
-                    <h3 class="feature-title english">Loyalty & Rewards System</h3>
-                    <h3 class="feature-title swahili">Mfumo wa Uaminifu na Zawadi</h3>
-                    <p class="feature-description english">
-                        Earn points for bookings, referrals, reviews, or engagement. Redeemable for discounts, free services, or products.
-                    </p>
-                    <p class="feature-description swahili">
-                        Pata pointi kwa maagizo, rufaa, hakiki, au ushiriki. Inaweza kubadilishwa kwa punguzo, huduma za bure, au bidhaa.
+                    <h3 class="feature-title">
+                        <span class="english">Loyalty & Rewards System</span>
+                        <span class="swahili">Mfumo wa Uaminifu na Zawadi</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Earn points for bookings, referrals, reviews, or engagement. Redeemable for discounts, free services, or products.</span>
+                        <span class="swahili">Pata pointi kwa maagizo, rufaa, hakiki, au ushiriki. Inaweza kubadilishwa kwa punguzo, huduma za bure, au bidhaa.</span>
                     </p>
                     <div class="feature-benefits">
                         <span class="benefit-tag english">Points System</span>
                         <span class="benefit-tag english">Exclusive Rewards</span>
                         <span class="benefit-tag english">Member Benefits</span>
+                        <span class="benefit-tag swahili">Mfumo wa Pointi</span>
+                        <span class="benefit-tag swahili">Zawadi za Kipekee</span>
+                        <span class="benefit-tag swahili">Faida za Wanachama</span>
                     </div>
                 </div>
                 
-                <!-- Feature 6 -->
+                <!-- Smart Matching Algorithm -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="feature-title english">Smart Matching Algorithm</h3>
-                    <h3 class="feature-title swahili">Algorithm ya Kulinganisha Kwa Ujasiri</h3>
-                    <p class="feature-description english">
-                        Personalized recommendations for clients based on style, budget, location, and reviews. Find your perfect beauty professional match.
-                    </p>
-                    <p class="feature-description swahili">
-                        Mapendekezo ya kibinafsi kwa wateja kulingana na mtindo, bajeti, eneo, na hakiki. Tafuta mechi yako kamili ya mtaalamu wa urembo.
+                    <h3 class="feature-title">
+                        <span class="english">Smart Matching Algorithm</span>
+                        <span class="swahili">Algorithm ya Kulinganisha Kwa Ujasiri</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Personalized recommendations for clients based on style, budget, location, and reviews. Find your perfect beauty professional match.</span>
+                        <span class="swahili">Mapendekezo ya kibinafsi kwa wateja kulingana na mtindo, bajeti, eneo, na hakiki. Tafuta mechi yako kamili ya mtaalamu wa urembo.</span>
                     </p>
                     <div class="feature-benefits">
                         <span class="benefit-tag english">Personalized</span>
                         <span class="benefit-tag english">Smart Matching</span>
                         <span class="benefit-tag english">Style-Based</span>
+                        <span class="benefit-tag swahili">Kibinafsi</span>
+                        <span class="benefit-tag swahili">Kulinganisha Kwa Ujasiri</span>
+                        <span class="benefit-tag swahili">Kulingana na Mtindo</span>
                     </div>
                 </div>
                 
-                <!-- Feature 7 -->
+                <!-- Home Service / On-Demand -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-home"></i>
                     </div>
-                    <h3 class="feature-title english">Home Service / On-Demand</h3>
-                    <h3 class="feature-title swahili">Huduma ya Nyumbani / Kwa Mahitaji</h3>
-                    <p class="feature-description english">
-                        Book professionals to your home for convenience. Includes real-time tracking and notifications for a seamless experience.
-                    </p>
-                    <p class="feature-description swahili">
-                        Panga wataalamu kuja nyumbani kwako kwa urahisi. Inajumuisha ufuatiliaji wa wakati halisi na arifa kwa uzoefu laini.
+                    <h3 class="feature-title">
+                        <span class="english">Home Service / On-Demand</span>
+                        <span class="swahili">Huduma ya Nyumbani / Kwa Mahitaji</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Book professionals to your home for convenience. Includes real-time tracking and notifications for a seamless experience.</span>
+                        <span class="swahili">Panga wataalamu kuja nyumbani kwako kwa urahisi. Inajumuisha ufuatiliaji wa wakati halisi na arifa kwa uzoefu laini.</span>
                     </p>
                     <div class="feature-benefits">
                         <span class="benefit-tag english">Convenience</span>
                         <span class="benefit-tag english">Real-Time Tracking</span>
                         <span class="benefit-tag english">Luxury at Home</span>
+                        <span class="benefit-tag swahili">Urahisi</span>
+                        <span class="benefit-tag swahili">Ufuatiliaji wa Wakati Halisi</span>
+                        <span class="benefit-tag swahili">Anasa Nyumbani</span>
                     </div>
                 </div>
                 
-                <!-- Feature 8 -->
+                <!-- Reviews & Ratings -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-star"></i>
                     </div>
-                    <h3 class="feature-title english">Reviews & Ratings</h3>
-                    <h3 class="feature-title swahili">Hakiki na Makadirio</h3>
-                    <p class="feature-description english">
-                        Verified client reviews for every professional. Boosts credibility and helps clients make informed decisions.
-                    </p>
-                    <p class="feature-description swahili">
-                        Hakiki za wateja zilizothibitishwa kwa kila mtaalamu. Inaimarisha uaminifu na kusaidia wateja kufanya maamuzi yenye ujuzi.
+                    <h3 class="feature-title">
+                        <span class="english">Reviews & Ratings</span>
+                        <span class="swahili">Hakiki na Makadirio</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Verified client reviews for every professional. Boosts credibility and helps clients make informed decisions.</span>
+                        <span class="swahili">Hakiki za wateja zilizothibitishwa kwa kila mtaalamu. Inaimarisha uaminifu na kusaidia wateja kufanya maamuzi yenye ujuzi.</span>
                     </p>
                     <div class="feature-benefits">
                         <span class="benefit-tag english">Verified Reviews</span>
                         <span class="benefit-tag english">Trust Building</span>
                         <span class="benefit-tag english">Quality Assurance</span>
+                        <span class="benefit-tag swahili">Hakiki Zilizothibitishwa</span>
+                        <span class="benefit-tag swahili">Kujenga Imani</span>
+                        <span class="benefit-tag swahili">Hakikisho la Ubora</span>
                     </div>
                 </div>
                 
-                <!-- Feature 9 -->
+                <!-- Social Community -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-comments"></i>
                     </div>
-                    <h3 class="feature-title english">Social Community</h3>
-                    <h3 class="feature-title swahili">Jamii ya Kijamii</h3>
-                    <p class="feature-description english">
-                        Follow favorite artists, like and comment on work, share inspiration, and participate in challenges. Creates a beauty-centered social experience.
-                    </p>
-                    <p class="feature-description swahili">
-                        Fuata wasanii wapendwa, penda na maoni kuhusu kazi, shiriki ushauri, na shiriki katika changamoto. Huunda uzoefu wa kijamii unaozingatia urembo.
+                    <h3 class="feature-title">
+                        <span class="english">Social Community</span>
+                        <span class="swahili">Jamii ya Kijamii</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Follow favorite artists, like and comment on work, share inspiration, and participate in challenges. Creates a beauty-centered social experience.</span>
+                        <span class="swahili">Fuata wasanii wapendwa, penda na maoni kuhusu kazi, shiriki ushauri, na shiriki katika changamoto. Huunda uzoefu wa kijamii unaozingatia urembo.</span>
                     </p>
                     <div class="feature-benefits">
                         <span class="benefit-tag english">Community</span>
                         <span class="benefit-tag english">Social Features</span>
                         <span class="benefit-tag english">Engagement</span>
+                        <span class="benefit-tag swahili">Jamii</span>
+                        <span class="benefit-tag swahili">Vipengele vya Kijamii</span>
+                        <span class="benefit-tag swahili">Ushiriki</span>
                     </div>
                 </div>
                 
-                <!-- Feature 10 -->
+                <!-- Promotions & Featured Deals -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-percentage"></i>
                     </div>
-                    <h3 class="feature-title english">Promotions & Featured Deals</h3>
-                    <h3 class="feature-title swahili">Promosheni na Mapato Yanayojulikana</h3>
-                    <p class="feature-description english">
-                        Weekly or monthly discounts, featured professionals, and promotional packages. Helps both clients and professionals gain visibility.
-                    </p>
-                    <p class="feature-description swahili">
-                        Punguzo la kila wiki au kila mwezi, wataalamu wanaojulikana, na vifurushi vya promosheni. Inasaidia wateja na wataalamu kupata umaarufu.
+                    <h3 class="feature-title">
+                        <span class="english">Promotions & Featured Deals</span>
+                        <span class="swahili">Promosheni na Mapato Yanayojulikana</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Weekly or monthly discounts, featured professionals, and promotional packages. Helps both clients and professionals gain visibility.</span>
+                        <span class="swahili">Punguzo la kila wiki au kila mwezi, wataalamu wanaojulikana, na vifurushi vya promosheni. Inasaidia wateja na wataalamu kupata umaarufu.</span>
                     </p>
                     <div class="feature-benefits">
                         <span class="benefit-tag english">Exclusive Deals</span>
                         <span class="benefit-tag english">Featured Listings</span>
                         <span class="benefit-tag english">Savings</span>
+                        <span class="benefit-tag swahili">Mapato ya Kipekee</span>
+                        <span class="benefit-tag swahili">Orodha Zilizojulikana</span>
+                        <span class="benefit-tag swahili">Akiba</span>
                     </div>
                 </div>
             </div>
-            
-            <!-- Benefits CSS -->
-            <style>
-                .feature-benefits {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 8px;
-                    margin-top: 20px;
-                }
-                
-                .benefit-tag {
-                    background: rgba(212, 175, 55, 0.1);
-                    color: var(--gold);
-                    padding: 4px 12px;
-                    border-radius: 15px;
-                    font-size: 12px;
-                    font-weight: 500;
-                    letter-spacing: 0.5px;
-                    border: 1px solid rgba(212, 175, 55, 0.2);
-                }
-                
-                .swahili .benefit-tag {
-                    display: none;
-                }
-            </style>
         </div>
     </section>
 
@@ -300,15 +307,17 @@
     <section class="section" style="background: rgba(212, 175, 55, 0.02);">
         <div class="container">
             <div class="section-title">
-                <div class="section-subtitle english">Advanced Technology</div>
-                <div class="section-subtitle swahili">Teknolojia ya Juu</div>
-                <h2 class="section-main-title english">Powered by Innovation</h2>
-                <h2 class="section-main-title swahili">Inaendeshwa na Ubunifu</h2>
-                <p class="section-description english">
-                    Our platform combines cutting-edge technology with luxury beauty experiences.
-                </p>
-                <p class="section-description swahili">
-                    Jukwaa letu linaunganisha teknolojia ya kisasa na uzoefu wa urembo wa kifahari.
+                <div class="section-subtitle">
+                    <span class="english">Advanced Technology</span>
+                    <span class="swahili">Teknolojia ya Juu</span>
+                </div>
+                <h2 class="section-main-title">
+                    <span class="english">Powered by Innovation</span>
+                    <span class="swahili">Inaendeshwa na Ubunifu</span>
+                </h2>
+                <p class="section-description">
+                    <span class="english">Our platform combines cutting-edge technology with luxury beauty experiences.</span>
+                    <span class="swahili">Jukwaa letu linaunganisha teknolojia ya kisasa na uzoefu wa urembo wa kifahari.</span>
                 </p>
             </div>
             
@@ -317,13 +326,13 @@
                     <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold);">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3 class="feature-title english">AI-Powered Recommendations</h3>
-                    <h3 class="feature-title swahili">Mapendekezo Yenye Nguvu ya AI</h3>
-                    <p class="feature-description english">
-                        Advanced artificial intelligence analyzes your preferences to suggest perfect beauty matches.
-                    </p>
-                    <p class="feature-description swahili">
-                        Akili bandia ya hali ya juu inachambua mapendeleo yako ili kupendekeza mechi kamili za urembo.
+                    <h3 class="feature-title">
+                        <span class="english">AI-Powered Recommendations</span>
+                        <span class="swahili">Mapendekezo Yenye Nguvu ya AI</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Advanced artificial intelligence analyzes your preferences to suggest perfect beauty matches.</span>
+                        <span class="swahili">Akili bandia ya hali ya juu inachambua mapendeleo yako ili kupendekeza mechi kamili za urembo.</span>
                     </p>
                 </div>
                 
@@ -331,13 +340,13 @@
                     <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold);">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="feature-title english">Secure Payments</h3>
-                    <h3 class="feature-title swahili">Malipo Salama</h3>
-                    <p class="feature-description english">
-                        Bank-grade security for all transactions with multiple payment options.
-                    </p>
-                    <p class="feature-description swahili">
-                        Usalama wa kiwango cha benki kwa shughuli zote za kifedha na chaguzi nyingi za malipo.
+                    <h3 class="feature-title">
+                        <span class="english">Secure Payments</span>
+                        <span class="swahili">Malipo Salama</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Bank-grade security for all transactions with multiple payment options.</span>
+                        <span class="swahili">Usalama wa kiwango cha benki kwa shughuli zote za kifedha na chaguzi nyingi za malipo.</span>
                     </p>
                 </div>
                 
@@ -345,13 +354,13 @@
                     <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold);">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 class="feature-title english">Mobile-First Design</h3>
-                    <h3 class="feature-title swahili">Muundo wa Kwanza wa Rununu</h3>
-                    <p class="feature-description english">
-                        Seamless experience across all devices with intuitive mobile app design.
-                    </p>
-                    <p class="feature-description swahili">
-                        Uzoefu laini kwenye vifaa vyote na muundo wa programu ya rununu inayoeleweka kwa urahisi.
+                    <h3 class="feature-title">
+                        <span class="english">Mobile-First Design</span>
+                        <span class="swahili">Muundo wa Kwanza wa Rununu</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Seamless experience across all devices with intuitive mobile app design.</span>
+                        <span class="swahili">Uzoefu laini kwenye vifaa vyote na muundo wa programu ya rununu inayoeleweka kwa urahisi.</span>
                     </p>
                 </div>
             </div>
@@ -364,11 +373,9 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Salooni Verse</h3>
-                    <p class="english" style="margin-bottom: 20px;">
-                        Your luxury beauty universe in Tanzania. Connecting discerning clients with premium beauty professionals.
-                    </p>
-                    <p class="swahili" style="margin-bottom: 20px;">
-                        Ulimwengu wako wa urembo wa kifahari Tanzania. Kuunganisha wateja wanaotambua na wataalamu wa urembo wa hali ya juu.
+                    <p style="margin-bottom: 20px; color: #ccc;">
+                        <span class="english">Your luxury beauty universe in Tanzania. Connecting discerning clients with premium beauty professionals.</span>
+                        <span class="swahili">Ulimwengu wako wa urembo wa kifahari Tanzania. Kuunganisha wateja wanaotambua na wataalamu wa urembo wa hali ya juu.</span>
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -379,8 +386,10 @@
                 </div>
                 
                 <div class="footer-column">
-                    <h3 class="english">Quick Links</h3>
-                    <h3 class="swahili">Viungo vya Haraka</h3>
+                    <h3>
+                        <span class="english">Quick Links</span>
+                        <span class="swahili">Viungo vya Haraka</span>
+                    </h3>
                     <ul class="footer-links">
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span class="english">Home</span><span class="swahili">Nyumbani</span></a></li>
                         <li><a href="categories.html"><i class="fas fa-chevron-right"></i> <span class="english">Categories</span><span class="swahili">Aina</span></a></li>
@@ -391,29 +400,34 @@
                 </div>
                 
                 <div class="footer-column">
-                    <h3 class="english">Top Features</h3>
-                    <h3 class="swahili">Vipengele Vikuu</h3>
+                    <h3>
+                        <span class="english">Top Features</span>
+                        <span class="swahili">Vipengele Vikuu</span>
+                    </h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Virtual Try-On</span><span class="swahili">Kujaribu Mtandaoni</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Home Services</span><span class="swahili">Huduma za Nyumbani</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Loyalty Rewards</span><span class="swahili">Zawadi za Uaminifu</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">AI Matching</span><span class="swahili">Kulinganisha kwa AI</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Trend Tracker</span><span class="swahili">Kifuatiliaji cha Mienendo</span></a></li>
+                        <li><a href="features.html"><i class="fas fa-chevron-right"></i> <span class="english">Virtual Try-On</span><span class="swahili">Kujaribu Mtandaoni</span></a></li>
+                        <li><a href="features.html"><i class="fas fa-chevron-right"></i> <span class="english">Home Services</span><span class="swahili">Huduma za Nyumbani</span></a></li>
+                        <li><a href="features.html"><i class="fas fa-chevron-right"></i> <span class="english">Loyalty Rewards</span><span class="swahili">Zawadi za Uaminifu</span></a></li>
+                        <li><a href="features.html"><i class="fas fa-chevron-right"></i> <span class="english">AI Matching</span><span class="swahili">Kulinganisha kwa AI</span></a></li>
+                        <li><a href="features.html"><i class="fas fa-chevron-right"></i> <span class="english">Trend Tracker</span><span class="swahili">Kifuatiliaji cha Mienendo</span></a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3 class="english">Contact Info</h3>
-                    <h3 class="swahili">Taarifa za Mawasiliano</h3>
+                    <h3>
+                        <span class="english">Contact Info</span>
+                        <span class="swahili">Taarifa za Mawasiliano</span>
+                    </h3>
                     <div class="info-card" style="margin-bottom: 20px;">
                         <div class="info-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="info-content">
-                            <h4 class="english">Location</h4>
-                            <h4 class="swahili">Eneo</h4>
-                            <p class="english">Dar es Salaam, Tanzania</p>
-                            <p class="swahili">Dar es Salaam, Tanzania</p>
+                            <h4>
+                                <span class="english">Location</span>
+                                <span class="swahili">Eneo</span>
+                            </h4>
+                            <p style="color: #ccc;">Dar es Salaam, Tanzania</p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -421,18 +435,21 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="info-content">
-                            <h4 class="english">Email</h4>
-                            <h4 class="swahili">Barua Pepe</h4>
-                            <p class="english">info@salooniverse.co.tz</p>
-                            <p class="swahili">info@salooniverse.co.tz</p>
+                            <h4>
+                                <span class="english">Email</span>
+                                <span class="swahili">Barua Pepe</span>
+                            </h4>
+                            <p style="color: #ccc;">info@salooniverse.co.tz</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="english">&copy; 2023 Salooni Verse. All rights reserved. | Luxury Beauty Universe for Tanzania</p>
-                <p class="swahili">&copy; 2023 Salooni Verse. Haki zote zimehifadhiwa. | Ulimwengu wa Urembo wa Kifahari kwa Tanzania</p>
+                <p>
+                    <span class="english">&copy; 2023 Salooni Verse. All rights reserved. | Luxury Beauty Universe for Tanzania</span>
+                    <span class="swahili">&copy; 2023 Salooni Verse. Haki zote zimehifadhiwa. | Ulimwengu wa Urembo wa Kifahari kwa Tanzania</span>
+                </p>
             </div>
         </div>
     </footer>
