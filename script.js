@@ -1,36 +1,50 @@
-// script.js - Salooni Verse Website Functionality
+// SALOONI VERSE - Complete Bilingual Website Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Language Toggle
-    const languageSwitcher = document.querySelector('.language-switcher');
-    const englishElements = document.querySelectorAll('.english');
-    const swahiliElements = document.querySelectorAll('.swahili');
-    let isEnglish = true;
+    console.log('Salooni Verse website loaded successfully!');
     
-    if (languageSwitcher) {
-        languageSwitcher.addEventListener('click', function() {
-            isEnglish = !isEnglish;
-            
-            if (isEnglish) {
-                englishElements.forEach(el => el.style.display = 'block');
-                swahiliElements.forEach(el => el.style.display = 'none');
-                this.innerHTML = '<i class="fas fa-globe"></i><span>EN</span>';
-            } else {
-                englishElements.forEach(el => el.style.display = 'none');
-                swahiliElements.forEach(el => el.style.display = 'block');
-                this.innerHTML = '<i class="fas fa-globe"></i><span>SW</span>';
-            }
-            
-            localStorage.setItem('salooni-language', isEnglish ? 'en' : 'sw');
-        });
+    // ========== LANGUAGE SWITCHER ==========
+    const languageSwitcher = document.getElementById('languageSwitcher');
+    let isEnglish = !localStorage.getItem('salooni-language') || localStorage.getItem('salooni-language') === 'en';
+    
+    // Function to switch language
+    function switchLanguage() {
+        isEnglish = !isEnglish;
         
-        const savedLang = localStorage.getItem('salooni-language');
-        if (savedLang === 'sw') {
-            languageSwitcher.click();
+        if (isEnglish) {
+            // Switch to English
+            document.body.classList.remove('swahili-active');
+            localStorage.setItem('salooni-language', 'en');
+            if (languageSwitcher) {
+                languageSwitcher.querySelector('.lang-text').textContent = 'EN';
+            }
+            console.log('Switched to English');
+        } else {
+            // Switch to Swahili
+            document.body.classList.add('swahili-active');
+            localStorage.setItem('salooni-language', 'sw');
+            if (languageSwitcher) {
+                languageSwitcher.querySelector('.lang-text').textContent = 'SW';
+            }
+            console.log('Switched to Swahili');
         }
     }
     
-    // Mobile Navigation Toggle
-    const mobileToggle = document.querySelector('.mobile-toggle');
+    // Load saved language
+    if (localStorage.getItem('salooni-language') === 'sw') {
+        document.body.classList.add('swahili-active');
+        if (languageSwitcher) {
+            languageSwitcher.querySelector('.lang-text').textContent = 'SW';
+        }
+        isEnglish = false;
+    }
+    
+    // Add click event to language switcher
+    if (languageSwitcher) {
+        languageSwitcher.addEventListener('click', switchLanguage);
+    }
+    
+    // ========== MOBILE MENU ==========
+    const mobileToggle = document.getElementById('mobileToggle');
     const navLinks = document.querySelector('.nav-links');
     
     if (mobileToggle && navLinks) {
@@ -41,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 : '<i class="fas fa-bars"></i>';
         });
         
+        // Close mobile menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -49,9 +64,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.nav-links') && !event.target.closest('#mobileToggle')) {
+                navLinks.classList.remove('active');
+                if (mobileToggle) {
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            }
+        });
     }
     
-    // Header Scroll Effect
+    // ========== HEADER SCROLL EFFECT ==========
     const header = document.querySelector('.header');
     if (header) {
         window.addEventListener('scroll', function() {
@@ -63,107 +88,71 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Explore Services Button
-    const exploreButtons = document.querySelectorAll('.cta-button');
-    exploreButtons.forEach(button => {
-        if (button.textContent.includes('Explore Services') || button.textContent.includes('Chunguza Huduma')) {
-            button.addEventListener('click', function() {
-                window.location.href = 'categories.html';
-            });
-        }
-    });
+    // ========== EXPLORE SERVICES BUTTON ==========
+    const exploreServicesBtn = document.getElementById('exploreServices');
+    if (exploreServicesBtn) {
+        exploreServicesBtn.addEventListener('click', function() {
+            window.location.href = 'categories.html';
+        });
+    }
     
-    // Become a Pro Button
-    const becomeProButtons = document.querySelectorAll('.secondary-button');
-    becomeProButtons.forEach(button => {
-        if (button.textContent.includes('Become a Pro') || button.textContent.includes('Kuwa Mtaalamu')) {
-            button.addEventListener('click', function() {
-                if (isEnglish) {
-                    alert('✨ Join our professional community! Please visit the "Contact" page to apply as a beauty professional.');
-                } else {
-                    alert('✨ Jiunge na jamii yetu ya wataalamu! Tafadhali tembelea ukurasa wa "Mawasiliano" kwa kuomba kuwa mtaalamu wa urembo.');
-                }
-            });
-        }
-    });
+    // ========== BECOME A PRO BUTTON ==========
+    const becomeProBtn = document.getElementById('becomePro');
+    if (becomeProBtn) {
+        becomeProBtn.addEventListener('click', function() {
+            if (isEnglish) {
+                alert('✨ Join our professional community! Please visit the "Become a Pro" section on our website or contact us directly to apply as a beauty professional.');
+            } else {
+                alert('✨ Jiunge na jamii yetu ya wataalamu! Tafadhali tembelea sehemu ya "Kuwa Mtaalamu" kwenye tovuti yetu au wasiliana nasi moja kwa moja kwa kuomba kuwa mtaalamu wa urembo.');
+            }
+        });
+    }
     
-    // Download App Button
-    const downloadButtons = document.querySelectorAll('.cta-button');
-    downloadButtons.forEach(button => {
-        if (button.textContent.includes('Download') || button.textContent.includes('Pakua')) {
-            button.addEventListener('click', function() {
-                if (isEnglish) {
-                    alert('✨ Thank you for your interest! The Salooni Verse app will be available soon on the App Store and Google Play.');
-                } else {
-                    alert('✨ Asante kwa kupendezwa! Programu ya Salooni Verse itapatikana hivi karibuni kwenye App Store na Google Play.');
-                }
-            });
-        }
-    });
+    // ========== DOWNLOAD APP BUTTON ==========
+    const downloadAppBtn = document.getElementById('downloadApp');
+    if (downloadAppBtn) {
+        downloadAppBtn.addEventListener('click', function() {
+            if (isEnglish) {
+                alert('✨ Thank you for your interest! The Salooni Verse app will be available soon on the App Store and Google Play. We will notify you when it\'s ready!');
+            } else {
+                alert('✨ Asante kwa kupendezwa! Programu ya Salooni Verse itapatikana hivi karibuni kwenye App Store na Google Play. Tutakujulisha inapokuwa tayari!');
+            }
+        });
+    }
     
-    // Contact Form Submission
+    // ========== JOIN NOW BUTTON ==========
+    const joinNowBtn = document.getElementById('joinNow');
+    if (joinNowBtn) {
+        joinNowBtn.addEventListener('click', function() {
+            window.location.href = 'contact.html';
+        });
+    }
+    
+    // ========== LEARN MORE BUTTON ==========
+    const learnMoreBtn = document.getElementById('learnMore');
+    if (learnMoreBtn) {
+        learnMoreBtn.addEventListener('click', function() {
+            window.location.href = 'about.html';
+        });
+    }
+    
+    // ========== CONTACT FORM ==========
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             if (isEnglish) {
-                alert('✨ Thank you for your message! Our team will contact you within 24 hours.');
+                alert('✨ Thank you for your message! Our team will contact you within 24 hours. Welcome to the Salooni Verse community!');
             } else {
-                alert('✨ Asante kwa ujumbe wako! Timu yetu itawasiliana nawe ndani ya masaa 24.');
+                alert('✨ Asante kwa ujumbe wako! Timu yetu itawasiliana nawe ndani ya masaa 24. Karibu katika jamii ya Salooni Verse!');
             }
             
             contactForm.reset();
         });
     }
     
-    // Category Card Click to Navigate
-    const categoryCards = document.querySelectorAll('.category-card');
-    categoryCards.forEach(card => {
-        card.addEventListener('click', function() {
-            window.location.href = 'categories.html';
-        });
-        
-        // Hover Effects
-        card.addEventListener('mouseenter', function() {
-            const icon = this.querySelector('.category-icon');
-            if (icon) {
-                icon.style.transform = 'scale(1.1) rotate(5deg)';
-            }
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            const icon = this.querySelector('.category-icon');
-            if (icon) {
-                icon.style.transform = 'scale(1) rotate(0)';
-            }
-        });
-    });
-    
-    // Feature Card Hover Effects
-    const featureCards = document.querySelectorAll('.feature-card');
-    featureCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            const icon = this.querySelector('.feature-icon');
-            if (icon) {
-                icon.style.transform = 'scale(1.05)';
-            }
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            const icon = this.querySelector('.feature-icon');
-            if (icon) {
-                icon.style.transform = 'scale(1)';
-            }
-        });
-    });
-    
-    // Initialize with English visible
-    if (englishElements.length > 0) {
-        swahiliElements.forEach(el => el.style.display = 'none');
-    }
-    
-    // FAQ Functionality (for contact page)
+    // ========== FAQ FUNCTIONALITY ==========
     const faqItems = document.querySelectorAll('.faq-item');
     if (faqItems.length > 0) {
         faqItems.forEach(item => {
@@ -184,11 +173,63 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Page transition effect
+    // ========== HOVER EFFECTS ==========
+    // Category cards
+    const categoryCards = document.querySelectorAll('.category-card');
+    categoryCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            const icon = this.querySelector('.category-icon');
+            if (icon) {
+                icon.style.transform = 'scale(1.1) rotate(5deg)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            const icon = this.querySelector('.category-icon');
+            if (icon) {
+                icon.style.transform = 'scale(1) rotate(0)';
+            }
+        });
+    });
+    
+    // Feature cards
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            const icon = this.querySelector('.feature-icon');
+            if (icon) {
+                icon.style.transform = 'scale(1.05)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            const icon = this.querySelector('.feature-icon');
+            if (icon) {
+                icon.style.transform = 'scale(1)';
+            }
+        });
+    });
+    
+    // ========== ACTIVE NAV LINK ==========
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinksAll = document.querySelectorAll('.nav-links a');
+    
+    navLinksAll.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+    
+    // ========== PAGE TRANSITION ==========
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s ease';
     
     setTimeout(() => {
         document.body.style.opacity = '1';
     }, 100);
+    
+    console.log('All JavaScript functionality loaded successfully!');
 });
