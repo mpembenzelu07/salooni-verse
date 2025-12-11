@@ -47,43 +47,24 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                if (mobileToggle) {
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
             });
         });
     }
     
     // Header Scroll Effect
     const header = document.querySelector('.header');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-    
-    // Active Navigation Link
-    const currentPage = window.location.pathname.split('/').pop();
-    const navLinksAll = document.querySelectorAll('.nav-links a');
-    
-    navLinksAll.forEach(link => {
-        const linkPage = link.getAttribute('href');
-        if (linkPage === currentPage || 
-            (currentPage === '' && linkPage === 'index.html') ||
-            (currentPage === 'index.html' && linkPage === '.')) {
-            link.classList.add('active');
-        }
-        
-        // Update href for proper navigation between pages
-        if (!link.getAttribute('href').startsWith('#')) {
-            link.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== currentPage) {
-                    e.preventDefault();
-                    window.location.href = this.getAttribute('href');
-                }
-            });
-        }
-    });
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
     
     // Download App Button
     const downloadButtons = document.querySelectorAll('.cta-button');
@@ -133,6 +114,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Feature Card Hover Effects
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            const icon = this.querySelector('.feature-icon');
+            if (icon) {
+                icon.style.transform = 'scale(1.05)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            const icon = this.querySelector('.feature-icon');
+            if (icon) {
+                icon.style.transform = 'scale(1)';
+            }
+        });
+    });
+    
     // Initialize with English visible
     if (englishElements.length > 0) {
         swahiliElements.forEach(el => el.style.display = 'none');
@@ -140,25 +139,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add decorative gold elements dynamically
     function addGoldElements() {
-        const heroSection = document.querySelector('.hero');
-        if (heroSection) {
-            for (let i = 0; i < 5; i++) {
+        const sections = document.querySelectorAll('.section, .hero');
+        sections.forEach(section => {
+            for (let i = 0; i < 3; i++) {
                 const goldDot = document.createElement('div');
                 goldDot.className = 'gold-dot';
                 goldDot.style.cssText = `
                     position: absolute;
-                    width: 3px;
-                    height: 3px;
+                    width: ${Math.random() * 4 + 2}px;
+                    height: ${Math.random() * 4 + 2}px;
                     background: var(--gold);
                     border-radius: 50%;
-                    opacity: 0.5;
+                    opacity: ${Math.random() * 0.3 + 0.1};
                     z-index: -1;
                 `;
                 goldDot.style.left = `${Math.random() * 100}%`;
                 goldDot.style.top = `${Math.random() * 100}%`;
-                heroSection.appendChild(goldDot);
+                section.appendChild(goldDot);
             }
-        }
+        });
     }
     
     addGoldElements();
@@ -170,4 +169,22 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         document.body.style.opacity = '1';
     }, 100);
+    
+    // Form select language handling
+    const formSelects = document.querySelectorAll('select.form-control');
+    formSelects.forEach(select => {
+        select.addEventListener('change', function() {
+            // Show/hide options based on language
+            const options = this.querySelectorAll('option');
+            options.forEach(option => {
+                if (isEnglish && option.classList.contains('swahili')) {
+                    option.style.display = 'none';
+                } else if (!isEnglish && option.classList.contains('english')) {
+                    option.style.display = 'none';
+                } else {
+                    option.style.display = 'block';
+                }
+            });
+        });
+    });
 });
