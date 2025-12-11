@@ -3,10 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Salooni Verse</title>
+    <title>Contact - Salooni Verse</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .contact-form {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--gold);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-family: 'Lora', serif;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .contact-info-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .contact-info-card h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .contact-detail:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h4 {
+            color: var(--text-color);
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        
+        .contact-text p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+        
+        .business-hours {
+            list-style: none;
+        }
+        
+        .business-hours li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            color: #aaa;
+        }
+        
+        .business-hours li:last-child {
+            border-bottom: none;
+        }
+        
+        .day {
+            font-weight: 500;
+            color: var(--text-color);
+        }
+        
+        .submit-btn {
+            background: var(--gold);
+            color: var(--bg-color);
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            background: var(--gold-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .map-placeholder {
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .map-placeholder i {
+            font-size: 48px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .contact-info-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
 </head>
 <body class="luxury-bg">
     <!-- Header -->
@@ -29,18 +203,20 @@
                 </ul>
                 
                 <div class="header-right">
-                    <div class="language-switcher">
+                    <div class="language-switcher" id="languageSwitcher">
                         <i class="fas fa-globe"></i>
-                        <span>EN</span>
+                        <span class="lang-text">EN</span>
                     </div>
-                    <button class="cta-button">
+                    <button class="cta-button" id="downloadApp">
                         <i class="fas fa-download"></i>
                         <span class="english">Download App</span>
                         <span class="swahili">Pakua Programu</span>
                     </button>
-                    <div class="mobile-toggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -50,295 +226,283 @@
     <section class="hero" style="padding: 180px 0 80px;">
         <div class="container">
             <div class="section-title">
-                <div class="section-subtitle english">Get In Touch</div>
-                <div class="section-subtitle swahili">Wasiliana Nasi</div>
-                <h2 class="section-main-title english">Connect With Salooni Verse</h2>
-                <h2 class="section-main-title swahili">Ungana na Salooni Verse</h2>
-                <p class="section-description english">
-                    Have questions, partnership inquiries, or feedback? We'd love to hear from you.
-                </p>
-                <p class="section-description swahili">
-                    Una maswali, uchunguzi wa ushirikiano, au maoni? Tungependa kusikia kutoka kwako.
+                <div class="section-subtitle">
+                    <span class="english">Get In Touch</span>
+                    <span class="swahili">Wasiliana Nasi</span>
+                </div>
+                <h1 class="section-main-title">
+                    <span class="english">Contact Salooni Verse</span>
+                    <span class="swahili">Mawasiliano na Salooni Verse</span>
+                </h1>
+                <p class="section-description">
+                    <span class="english">Have questions, suggestions, or need support? We're here to help you connect with Tanzania's beauty universe.</span>
+                    <span class="swahili">Una maswali, mapendekezo, au unahitaji msaada? Tupo hapa kukusaidia kuunganishwa na ulimwengu wa urembo wa Tanzania.</span>
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="section">
+    <section class="section" style="padding: 80px 0;">
         <div class="container">
             <div class="contact-grid">
-                <!-- Contact Information -->
-                <div class="contact-info">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4 class="english">Location</h4>
-                            <h4 class="swahili">Eneo</h4>
-                            <p class="english">Dar es Salaam, Tanzania</p>
-                            <p class="swahili">Dar es Salaam, Tanzania</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4 class="english">Phone Number</h4>
-                            <h4 class="swahili">Namba ya Simu</h4>
-                            <p class="english">+255 123 456 789</p>
-                            <p class="swahili">+255 123 456 789</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4 class="english">Email Address</h4>
-                            <h4 class="swahili">Anwani ya Barua Pepe</h4>
-                            <p class="english">info@salooniverse.co.tz</p>
-                            <p class="swahili">info@salooniverse.co.tz</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4 class="english">Business Hours</h4>
-                            <h4 class="swahili">Saa za Biashara</h4>
-                            <p class="english">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                            <p class="english">Saturday: 9:00 AM - 4:00 PM</p>
-                            <p class="swahili">Jumatatu - Ijumaa: 8:00 asubuhi - 6:00 usiku</p>
-                            <p class="swahili">Jumamosi: 9:00 asubuhi - 4:00 usiku</p>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h4 class="english" style="margin-bottom: 15px; color: var(--white);">Follow Us</h4>
-                        <h4 class="swahili" style="margin-bottom: 15px; color: var(--white);">Tufuate</h4>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
                 <!-- Contact Form -->
                 <div class="contact-form">
-                    <h3 class="english" style="margin-bottom: 30px; color: var(--gold);">Send Us a Message</h3>
-                    <h3 class="swahili" style="margin-bottom: 30px; color: var(--gold);">Tutumie Ujumbe</h3>
+                    <h2 class="feature-title" style="margin-bottom: 30px;">
+                        <span class="english">Send Us a Message</span>
+                        <span class="swahili">Tutumie Ujumbe</span>
+                    </h2>
                     
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name" class="english">Full Name</label>
-                            <label for="name" class="swahili">Jina Kamili</label>
+                            <label for="name">
+                                <span class="english">Full Name</span>
+                                <span class="swahili">Jina Kamili</span>
+                            </label>
                             <input type="text" id="name" class="form-control" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email" class="english">Email Address</label>
-                            <label for="email" class="swahili">Anwani ya Barua Pepe</label>
+                            <label for="email">
+                                <span class="english">Email Address</span>
+                                <span class="swahili">Anwani ya Barua Pepe</span>
+                            </label>
                             <input type="email" id="email" class="form-control" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone" class="english">Phone Number</label>
-                            <label for="phone" class="swahili">Namba ya Simu</label>
-                            <input type="tel" id="phone" class="form-control">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" class="english">Subject</label>
-                            <label for="subject" class="swahili">Mada</label>
+                            <label for="subject">
+                                <span class="english">Subject</span>
+                                <span class="swahili">Mada</span>
+                            </label>
                             <select id="subject" class="form-control" required>
-                                <option value="" class="english">Select a subject</option>
-                                <option value="" class="swahili">Chagua mada</option>
-                                <option value="general" class="english">General Inquiry</option>
-                                <option value="general" class="swahili">Uchunguzi wa Jumla</option>
-                                <option value="partnership" class="english">Partnership Opportunity</option>
-                                <option value="partnership" class="swahili">Fursa ya Ushirikiano</option>
-                                <option value="professional" class="english">Become a Professional</option>
-                                <option value="professional" class="swahili">Kuwa Mtaalamu</option>
-                                <option value="support" class="english">Technical Support</option>
-                                <option value="support" class="swahili">Usaidizi wa Kiufundi</option>
-                                <option value="feedback" class="english">Feedback & Suggestions</option>
-                                <option value="feedback" class="swahili">Maoni na Mapendekezo</option>
+                                <option value="">
+                                    <span class="english">Select a subject</span>
+                                    <span class="swahili">Chagua mada</span>
+                                </option>
+                                <option value="general">
+                                    <span class="english">General Inquiry</span>
+                                    <span class="swahili">Uchunguzi wa Jumla</span>
+                                </option>
+                                <option value="support">
+                                    <span class="english">Customer Support</span>
+                                    <span class="swahili">Msaada wa Wateja</span>
+                                </option>
+                                <option value="professional">
+                                    <span class="english">Join as Professional</span>
+                                    <span class="swahili">Jiunge kama Mtaalamu</span>
+                                </option>
+                                <option value="business">
+                                    <span class="english">Business Partnership</span>
+                                    <span class="swahili">Ushirika wa Biashara</span>
+                                </option>
+                                <option value="feedback">
+                                    <span class="english">Feedback & Suggestions</span>
+                                    <span class="swahili">Maoni na Mapendekezo</span>
+                                </option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message" class="english">Message</label>
-                            <label for="message" class="swahili">Ujumbe</label>
-                            <textarea id="message" class="form-control" rows="5" required></textarea>
+                            <label for="message">
+                                <span class="english">Your Message</span>
+                                <span class="swahili">Ujumbe Wako</span>
+                            </label>
+                            <textarea id="message" class="form-control" required></textarea>
                         </div>
                         
-                        <button type="submit" class="cta-button english" style="width: 100%;">
+                        <button type="submit" class="submit-btn">
                             <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                        <button type="submit" class="cta-button swahili" style="width: 100%;">
-                            <i class="fas fa-paper-plane"></i>
-                            Tuma Ujumbe
+                            <span class="english">Send Message</span>
+                            <span class="swahili">Tuma Ujumbe</span>
                         </button>
                     </form>
                 </div>
+                
+                <!-- Contact Information -->
+                <div>
+                    <div class="contact-info-card">
+                        <h3>
+                            <span class="english">Contact Information</span>
+                            <span class="swahili">Taarifa za Mawasiliano</span>
+                        </h3>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>
+                                    <span class="english">Head Office</span>
+                                    <span class="swahili">Ofisi Kuu</span>
+                                </h4>
+                                <p>
+                                    <span class="english">Salooni Verse Tower<br>Mikocheni Area<br>Dar es Salaam, Tanzania</span>
+                                    <span class="swahili">Mnara wa Salooni Verse<br>Eneo la Mikocheni<br>Dar es Salaam, Tanzania</span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>
+                                    <span class="english">Phone Number</span>
+                                    <span class="swahili">Namba ya Simu</span>
+                                </h4>
+                                <p>+255 789 456 123</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>
+                                    <span class="english">Email Address</span>
+                                    <span class="swahili">Anwani ya Barua Pepe</span>
+                                </h4>
+                                <p>info@salooniverse.co.tz<br>support@salooniverse.co.tz</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-card">
+                        <h3>
+                            <span class="english">Business Hours</span>
+                            <span class="swahili">Saa za Biashara</span>
+                        </h3>
+                        
+                        <ul class="business-hours">
+                            <li>
+                                <span class="day">
+                                    <span class="english">Monday - Friday</span>
+                                    <span class="swahili">Jumatatu - Ijumaa</span>
+                                </span>
+                                <span>8:00 AM - 6:00 PM</span>
+                            </li>
+                            <li>
+                                <span class="day">
+                                    <span class="english">Saturday</span>
+                                    <span class="swahili">Jumamosi</span>
+                                </span>
+                                <span>9:00 AM - 4:00 PM</span>
+                            </li>
+                            <li>
+                                <span class="day">
+                                    <span class="english">Sunday</span>
+                                    <span class="swahili">Jumapili</span>
+                                </span>
+                                <span>
+                                    <span class="english">Closed</span>
+                                    <span class="swahili">Imefungwa</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-info-card">
+                        <h3>
+                            <span class="english">Emergency Support</span>
+                            <span class="swahili">Msaada wa Dharura</span>
+                        </h3>
+                        <p style="color: #aaa; margin-bottom: 15px;">
+                            <span class="english">For urgent issues with bookings or appointments:</span>
+                            <span class="swahili">Kwa masuala ya haraka kuhusu maagizo au mikutano:</span>
+                        </p>
+                        <div class="contact-detail" style="border: none; padding: 0;">
+                            <div class="contact-icon" style="background: rgba(255, 87, 87, 0.1); color: #ff5757;">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 style="color: #ff5757;">
+                                    <span class="english">24/7 Support Line</span>
+                                    <span class="swahili">Mstari wa Msaada wa Saa 24</span>
+                                </h4>
+                                <p style="color: #ff5757; font-weight: 600;">+255 754 123 456</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Placeholder -->
+            <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3 class="feature-title">
+                    <span class="english">Visit Our Office</span>
+                    <span class="swahili">Tembelea Ofisi Yetu</span>
+                </h3>
+                <p class="feature-description">
+                    <span class="english">Our headquarters are located in the heart of Dar es Salaam. We welcome visits by appointment.</span>
+                    <span class="swahili">Makao makuu yetu yako katikati ya Dar es Salaam. Tunakaribisha ziara kwa kupanga.</span>
+                </p>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="section" style="background: rgba(212, 175, 55, 0.02);">
+    <section class="section" style="background: rgba(212, 175, 55, 0.02); padding: 100px 0;">
         <div class="container">
             <div class="section-title">
-                <div class="section-subtitle english">Common Questions</div>
-                <div class="section-subtitle swahili">Maswali ya Kawaida</div>
-                <h2 class="section-main-title english">Frequently Asked Questions</h2>
-                <h2 class="section-main-title swahili">Maswali Yanayoulizwa Mara kwa Mara</h2>
+                <div class="section-subtitle">
+                    <span class="english">Help Center</span>
+                    <span class="swahili">Kituo cha Usaidizi</span>
+                </div>
+                <h2 class="section-main-title">
+                    <span class="english">Frequently Asked Questions</span>
+                    <span class="swahili">Maswali Yanayoulizwa Mara Kwa Mara</span>
+                </h2>
             </div>
             
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 class="english">How do I book a beauty service?</h4>
-                        <h4 class="swahili">Ninawezaje kufanya maagizo ya huduma ya urembo?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="english">
-                            Simply download our app, browse through our premium categories, select your preferred professional, choose your service, and book your appointment. You can also book through our website.
-                        </p>
-                        <p class="swahili">
-                            Pakua programu yetu, vinjari kupitia aina zetu za hali ya juu, chagua mtaalamu unayempenda, chagua huduma yako, na fanya maagizo ya madi yako. Unaweza pia kufanya maagizo kupitia tovuti yetu.
-                        </p>
-                    </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="feature-title">
+                        <span class="english">How do I book a service?</span>
+                        <span class="swahili">Ninawezaje kuhifadhi huduma?</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Simply browse categories, select a professional, choose your service, and book directly through our platform. You'll receive instant confirmation.</span>
+                        <span class="swahili">Chaguo msingi vinjari aina, chagua mtaalamu, chagua huduma yako, na uhifadhi moja kwa moja kupitia jukwaa letu. Utapokea uthibitishaji wa papo hapo.</span>
+                    </p>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 class="english">How can I become a beauty professional on Salooni Verse?</h4>
-                        <h4 class="swahili">Ninawezaje kuwa mtaalamu wa urembo kwenye Salooni Verse?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="english">
-                            Visit our "Become a Pro" section on the app or website, complete the registration form with your credentials and portfolio, and our team will review your application within 48 hours.
-                        </p>
-                        <p class="swahili">
-                            Tembelea sehemu yetu ya "Kuwa Mtaalamu" kwenye programu au tovuti, kamilisha fomu ya usajili na sifa zako na potifolio yako, na timu yetu itakagua programu yako ndani ya masaa 48.
-                        </p>
-                    </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">
+                        <span class="english">Are payments secure?</span>
+                        <span class="swahili">Malipo yako salama?</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Yes! We use bank-level encryption and secure payment gateways. Your financial information is never stored on our servers.</span>
+                        <span class="swahili">Ndio! Tunatumia usimbaji wa kiwango cha benki na milango salama ya malipo. Taarifa zako za kifedha hazihifadhiwi kwenye seva zetu.</span>
+                    </p>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 class="english">Are home services available in my area?</h4>
-                        <h4 class="swahili">Huduma za nyumbani zinapatikana katika eneo langu?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="english">
-                            Home services are available in major cities across Tanzania. When booking, the app will show you professionals available in your specific location.
-                        </p>
-                        <p class="swahili">
-                            Huduma za nyumbani zinapatikana katika miji mikuu kote Tanzania. Unapofanya maagizo, programu itakuonyesha wataalamu waliopo katika eneo lako maalum.
-                        </p>
-                    </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">
+                        <span class="english">How do professionals join?</span>
+                        <span class="swahili">Wataalamu wanawezaje kujiunga?</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Beauty professionals can apply through our website or app. We verify credentials and provide training on using our platform effectively.</span>
+                        <span class="swahili">Wataalamu wa urembo wanaweza kutumia maombi kupitia tovuti yetu au programu. Tunaidhinisha vyeti na kutoa mafunzo juu ya matumizi ya jukwaa letu kwa ufanisi.</span>
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="feature-title">
+                        <span class="english">What areas do you serve?</span>
+                        <span class="swahili">Je, unahudumia maeneo gani?</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Currently serving Dar es Salaam, Arusha, Mwanza, and Zanzibar. We're expanding to more cities across Tanzania soon.</span>
+                        <span class="swahili">Kwa sasa tunahudumia Dar es Salaam, Arusha, Mwanza, na Zanzibar. Tunapanua kwa miji zaidi Tanzania hivi karibuni.</span>
+                    </p>
                 </div>
             </div>
-            
-            <!-- FAQ CSS -->
-            <style>
-                .faq-grid {
-                    max-width: 800px;
-                    margin: 0 auto;
-                }
-                
-                .faq-item {
-                    background: rgba(255, 255, 255, 0.03);
-                    border: 1px solid rgba(212, 175, 55, 0.1);
-                    border-radius: var(--radius);
-                    margin-bottom: 15px;
-                    overflow: hidden;
-                }
-                
-                .faq-question {
-                    padding: 25px 30px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    cursor: pointer;
-                    transition: var(--transition);
-                }
-                
-                .faq-question:hover {
-                    background: rgba(255, 255, 255, 0.05);
-                }
-                
-                .faq-question h4 {
-                    color: var(--white);
-                    font-size: 18px;
-                    margin: 0;
-                }
-                
-                .faq-question i {
-                    color: var(--gold);
-                    transition: var(--transition);
-                }
-                
-                .faq-item.active .faq-question i {
-                    transform: rotate(180deg);
-                }
-                
-                .faq-answer {
-                    padding: 0 30px;
-                    max-height: 0;
-                    overflow: hidden;
-                    transition: var(--transition);
-                }
-                
-                .faq-item.active .faq-answer {
-                    padding: 0 30px 25px;
-                    max-height: 300px;
-                }
-                
-                .faq-answer p {
-                    color: var(--gray);
-                    margin-top: 10px;
-                }
-            </style>
-            
-            <script>
-                // FAQ functionality
-                document.addEventListener('DOMContentLoaded', function() {
-                    const faqItems = document.querySelectorAll('.faq-item');
-                    
-                    faqItems.forEach(item => {
-                        const question = item.querySelector('.faq-question');
-                        
-                        question.addEventListener('click', () => {
-                            // Close all other items
-                            faqItems.forEach(otherItem => {
-                                if (otherItem !== item && otherItem.classList.contains('active')) {
-                                    otherItem.classList.remove('active');
-                                }
-                            });
-                            
-                            // Toggle current item
-                            item.classList.toggle('active');
-                        });
-                    });
-                });
-            </script>
         </div>
     </section>
 
@@ -348,11 +512,9 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Salooni Verse</h3>
-                    <p class="english" style="margin-bottom: 20px;">
-                        Your luxury beauty universe in Tanzania. Connecting discerning clients with premium beauty professionals.
-                    </p>
-                    <p class="swahili" style="margin-bottom: 20px;">
-                        Ulimwengu wako wa urembo wa kifahari Tanzania. Kuunganisha wateja wanaotambua na wataalamu wa urembo wa hali ya juu.
+                    <p style="margin-bottom: 20px; color: #ccc;">
+                        <span class="english">Your luxury beauty universe in Tanzania. Connecting discerning clients with premium beauty professionals.</span>
+                        <span class="swahili">Ulimwengu wako wa urembo wa kifahari Tanzania. Kuunganisha wateja wanaotambua na wataalamu wa urembo wa hali ya juu.</span>
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -363,8 +525,10 @@
                 </div>
                 
                 <div class="footer-column">
-                    <h3 class="english">Quick Links</h3>
-                    <h3 class="swahili">Viungo vya Haraka</h3>
+                    <h3>
+                        <span class="english">Quick Links</span>
+                        <span class="swahili">Viungo vya Haraka</span>
+                    </h3>
                     <ul class="footer-links">
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span class="english">Home</span><span class="swahili">Nyumbani</span></a></li>
                         <li><a href="categories.html"><i class="fas fa-chevron-right"></i> <span class="english">Categories</span><span class="swahili">Aina</span></a></li>
@@ -375,52 +539,86 @@
                 </div>
                 
                 <div class="footer-column">
-                    <h3 class="english">Support</h3>
-                    <h3 class="swahili">Usaidizi</h3>
+                    <h3>
+                        <span class="english">Support</span>
+                        <span class="swahili">Msaada</span>
+                    </h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Help Center</span><span class="swahili">Kituo cha Usaidizi</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">FAQ</span><span class="swahili">Maswali ya Kawaida</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Privacy Policy</span><span class="swahili">Sera ya Faragha</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Terms of Service</span><span class="swahili">Sheria za Huduma</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Contact Support</span><span class="swahili">Wasiliana na Usaidizi</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="english">Help Center</span><span class="swahili">Kituo cha Usaidizi</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="english">Live Chat</span><span class="swahili">Mazungumzo ya Moja kwa Moja</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="english">Service Status</span><span class="swahili">Hali ya Huduma</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span class="english">Report Issue</span><span class="swahili">Ripoti Tatizo</span></a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3 class="english">Contact Info</h3>
-                    <h3 class="swahili">Taarifa za Mawasiliano</h3>
-                    <div class="info-card" style="margin-bottom: 20px;">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4 class="english">Location</h4>
-                            <h4 class="swahili">Eneo</h4>
-                            <p class="english">Dar es Salaam, Tanzania</p>
-                            <p class="swahili">Dar es Salaam, Tanzania</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4 class="english">Email</h4>
-                            <h4 class="swahili">Barua Pepe</h4>
-                            <p class="english">info@salooniverse.co.tz</p>
-                            <p class="swahili">info@salooniverse.co.tz</p>
-                        </div>
+                    <h3>
+                        <span class="english">Newsletter</span>
+                        <span class="swahili">Jarida</span>
+                    </h3>
+                    <p style="color: #aaa; margin-bottom: 20px;">
+                        <span class="english">Subscribe for beauty tips, promotions, and platform updates.</span>
+                        <span class="swahili">Jiandikishe kwa vidokezo vya urembo, promosheni, na visasisho vya jukwaa.</span>
+                    </p>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your email address" style="margin-bottom: 15px;">
+                        <button class="cta-button" style="width: 100%;">
+                            <span class="english">Subscribe</span>
+                            <span class="swahili">Jiandikishe</span>
+                        </button>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="english">&copy; 2023 Salooni Verse. All rights reserved. | Luxury Beauty Universe for Tanzania</p>
-                <p class="swahili">&copy; 2023 Salooni Verse. Haki zote zimehifadhiwa. | Ulimwengu wa Urembo wa Kifahari kwa Tanzania</p>
+                <p>
+                    <span class="english">&copy; 2023 Salooni Verse. All rights reserved. | Luxury Beauty Universe for Tanzania</span>
+                    <span class="swahili">&copy; 2023 Salooni Verse. Haki zote zimehifadhiwa. | Ulimwengu wa Urembo wa Kifahari kwa Tanzania</span>
+                </p>
             </div>
         </div>
     </footer>
 
+    <script>
+        // Contact form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Simple validation
+                    if (!name || !email || !subject || !message) {
+                        alert('Please fill in all fields');
+                        return;
+                    }
+                    
+                    // In a real application, you would send this data to a server
+                    // For now, we'll just show a success message
+                    
+                    // Check language
+                    const isSwahili = document.body.classList.contains('swahili-active');
+                    
+                    if (isSwahili) {
+                        alert('Asante kwa ujumbe wako! Tutawasiliana nawe hivi karibuni.');
+                    } else {
+                        alert('Thank you for your message! We will contact you soon.');
+                    }
+                    
+                    // Reset form
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
