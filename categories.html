@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty Categories - Salooni Verse</title>
+    <title>Categories - Salooni Verse</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -38,9 +38,11 @@
                         <span class="english">Download App</span>
                         <span class="swahili">Pakua Programu</span>
                     </button>
-                    <div class="mobile-toggle" id="mobileToggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -51,248 +53,121 @@
         <div class="container">
             <div class="section-title">
                 <div class="section-subtitle">
-                    <span class="english">Premium Selection</span>
-                    <span class="swahili">Uchaguzi wa Hali ya Juu</span>
+                    <span class="english">Premium Services</span>
+                    <span class="swahili">Huduma za Hali ya Juu</span>
                 </div>
                 <h2 class="section-main-title">
-                    <span class="english">All Beauty Categories</span>
-                    <span class="swahili">Aina Zote za Urembo</span>
+                    <span class="english">Beauty Categories</span>
+                    <span class="swahili">Aina za Urembo</span>
                 </h2>
                 <p class="section-description">
-                    <span class="english">Explore our complete range of luxury beauty services tailored for the sophisticated Tanzanian woman.</span>
-                    <span class="swahili">Chunguza anuwai yetu kamili ya huduma za urembo za kifahari zilizobinafsishwa kwa mwanamke mwenye ustadi wa Tanzania.</span>
+                    <span class="english">Browse our premium beauty service categories and find the perfect professional for your needs.</span>
+                    <span class="swahili">Vinjari aina za huduma zetu za urembo za hali ya juu na upate mtaalamu kamili kwa mahitaji yako.</span>
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- All Categories -->
+    <!-- Categories Grid -->
     <section class="section">
         <div class="container">
-            <div class="categories-grid">
-                <!-- Hair & Haircare -->
-                <div class="category-card" onclick="window.location.href='#book'">
-                    <div class="category-icon">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
                         <i class="fas fa-cut"></i>
                     </div>
-                    <h3 class="category-title">
-                        <span class="english">Hair & Haircare</span>
-                        <span class="swahili">Nywele na Utunzaji wa Nywele</span>
+                    <h3 class="feature-title">
+                        <span class="english">Hair Styling & Braiding</span>
+                        <span class="swahili">Mitindo na Kufuma Nywele</span>
                     </h3>
-                    <p class="category-description">
-                        <span class="english">Hairstylists, barbers, braiding, extensions, coloring, treatments, and premium haircare products.</span>
-                        <span class="swahili">Wakinyozi, wakinyozi wa kiume, kupiga msokoto, nywele za ziada, kupaka rangi, matibabu, na bidhaa za hali ya juu za utunzaji wa nywele.</span>
+                    <p class="feature-description">
+                        <span class="english">Professional hairstylists for cuts, coloring, braiding, and extensions.</span>
+                        <span class="swahili">Wakinyozi wa kitaalamu kwa kukata, kupaka rangi, kufuma, na urefu wa nywele.</span>
                     </p>
-                    <div class="service-tags">
-                        <span class="service-tag english">Salon Stylists</span>
-                        <span class="service-tag english">Street Braiders</span>
-                        <span class="service-tag english">Hair Treatments</span>
-                        <span class="service-tag swahili">Wakinyozi wa Saluni</span>
-                        <span class="service-tag swahili">Wapiga Msokoto</span>
-                        <span class="service-tag swahili">Matibabu ya Nywele</span>
-                    </div>
                 </div>
                 
-                <!-- Makeup & Facial Beauty -->
-                <div class="category-card" onclick="window.location.href='#book'">
-                    <div class="category-icon">
+                <div class="feature-card">
+                    <div class="feature-icon">
                         <i class="fas fa-paint-brush"></i>
                     </div>
-                    <h3 class="category-title">
-                        <span class="english">Makeup & Facial Beauty</span>
-                        <span class="swahili">Make-up na Urembo wa Uso</span>
+                    <h3 class="feature-title">
+                        <span class="english">Makeup Artists</span>
+                        <span class="swahili">Wasanii wa Make-up</span>
                     </h3>
-                    <p class="category-description">
-                        <span class="english">Professional makeup artists, eyebrow shaping, eyelash extensions, face painting, and premium cosmetics.</span>
-                        <span class="swahili">Wasanii wa make-up wa kikazi, kutengeneza nyusi, kuongeza kope, kupaka rangi usoni, na vipodozi vya hali ya juu.</span>
+                    <p class="feature-description">
+                        <span class="english">Bridal, event, and special occasion makeup by certified artists.</span>
+                        <span class="swahili">Make-up ya harusi, hafla, na siku maalum na wasanii walioidhinishwa.</span>
                     </p>
-                    <div class="service-tags">
-                        <span class="service-tag english">Bridal Makeup</span>
-                        <span class="service-tag english">Eyelash Extensions</span>
-                        <span class="service-tag english">Microblading</span>
-                        <span class="service-tag swahili">Make-up ya Harusi</span>
-                        <span class="service-tag swahili">Kuongeza Kope</span>
-                        <span class="service-tag swahili">Microblading</span>
-                    </div>
                 </div>
                 
-                <!-- Nails -->
-                <div class="category-card" onclick="window.location.href='#book'">
-                    <div class="category-icon">
+                <div class="feature-card">
+                    <div class="feature-icon">
                         <i class="fas fa-hand-sparkles"></i>
                     </div>
-                    <h3 class="category-title">
-                        <span class="english">Nails</span>
-                        <span class="swahili">Kucha</span>
+                    <h3 class="feature-title">
+                        <span class="english">Nail Services</span>
+                        <span class="swahili">Huduma za Kucha</span>
                     </h3>
-                    <p class="category-description">
-                        <span class="english">Manicure, pedicure, nail art, gel nails, acrylic nails, and premium nail care products.</span>
-                        <span class="swahili">Manicure, pedicure, sanaa ya kucha, kucha za gel, kucha za acrylic, na bidhaa za hali ya juu za utunzaji wa kucha.</span>
+                    <p class="feature-description">
+                        <span class="english">Manicures, pedicures, gel nails, nail art, and acrylics.</span>
+                        <span class="swahili">Manicure, pedicure, kucha za gel, sanaa ya kucha, na acrylics.</span>
                     </p>
-                    <div class="service-tags">
-                        <span class="service-tag english">Nail Art</span>
-                        <span class="service-tag english">Gel Nails</span>
-                        <span class="service-tag english">Manicure</span>
-                        <span class="service-tag swahili">Sanaa ya Kucha</span>
-                        <span class="service-tag swahili">Kucha za Gel</span>
-                        <span class="service-tag swahili">Manicure</span>
-                    </div>
                 </div>
                 
-                <!-- Skincare -->
-                <div class="category-card" onclick="window.location.href='#book'">
-                    <div class="category-icon">
+                <div class="feature-card">
+                    <div class="feature-icon">
                         <i class="fas fa-spa"></i>
                     </div>
-                    <h3 class="category-title">
-                        <span class="english">Skincare</span>
-                        <span class="swahili">Utunzaji wa Ngozi</span>
+                    <h3 class="feature-title">
+                        <span class="english">Skincare & Facials</span>
+                        <span class="swahili">Utunzaji wa Ngozi na Facial</span>
                     </h3>
-                    <p class="category-description">
-                        <span class="english">Facials, acne treatment, anti-aging, body scrubs, chemical peels, and organic skincare products.</span>
-                        <span class="swahili">Facial, matibabu ya chunusi, kupambana na uzee, kunyoa mwili, magamba ya kemikali, na bidhaa za asili za utunzaji wa ngozi.</span>
+                    <p class="feature-description">
+                        <span class="english">Professional facials, skincare treatments, and beauty therapy.</span>
+                        <span class="swahili">Facial za kitaalamu, matibabu ya ngozi, na tiba ya urembo.</span>
                     </p>
-                    <div class="service-tags">
-                        <span class="service-tag english">Facials</span>
-                        <span class="service-tag english">Acne Treatment</span>
-                        <span class="service-tag english">Organic Products</span>
-                        <span class="service-tag swahili">Facial</span>
-                        <span class="service-tag swahili">Matibabu ya Chunusi</span>
-                        <span class="service-tag swahili">Bidhaa za Asili</span>
-                    </div>
                 </div>
                 
-                <!-- Body & Wellness -->
-                <div class="category-card" onclick="window.location.href='#book'">
-                    <div class="category-icon">
-                        <i class="fas fa-hands"></i>
-                    </div>
-                    <h3 class="category-title">
-                        <span class="english">Body & Wellness</span>
-                        <span class="swahili">Mwili na Ustawi</span>
-                    </h3>
-                    <p class="category-description">
-                        <span class="english">Massage therapy, waxing, hair removal, body wraps, aromatherapy, and relaxation treatments.</span>
-                        <span class="swahili">Tiba ya kutolea mikono, kunyoa, kuondoa nywele, kufunga mwili, aromatherapy, na matibabu ya kupumzika.</span>
-                    </p>
-                    <div class="service-tags">
-                        <span class="service-tag english">Massage</span>
-                        <span class="service-tag english">Waxing</span>
-                        <span class="service-tag english">Aromatherapy</span>
-                        <span class="service-tag swahili">Kutolea Mikono</span>
-                        <span class="service-tag swahili">Kunyoa</span>
-                        <span class="service-tag swahili">Aromatherapy</span>
-                    </div>
-                </div>
-                
-                <!-- Fashion & Personal Styling -->
-                <div class="category-card" onclick="window.location.href='#book'">
-                    <div class="category-icon">
+                <div class="feature-card">
+                    <div class="feature-icon">
                         <i class="fas fa-tshirt"></i>
                     </div>
-                    <h3 class="category-title">
-                        <span class="english">Fashion & Personal Styling</span>
-                        <span class="swahili">Mtindo na Mitindo ya Kibinafsi</span>
+                    <h3 class="feature-title">
+                        <span class="english">Henna & Body Art</span>
+                        <span class="swahili">Henna na Sanaa ya Mwilini</span>
                     </h3>
-                    <p class="category-description">
-                        <span class="english">Wardrobe consultation, outfit rentals, tailoring, fashion accessories, and personal shopping.</span>
-                        <span class="swahili">Ushauri wa nguo, kukodisha mavazi, ushonaji, vifaa vya mitindo, na ununuzi wa kibinafsi.</span>
+                    <p class="feature-description">
+                        <span class="english">Traditional and modern henna designs, temporary tattoos.</span>
+                        <span class="swahili">Miundo ya kitamaduni na ya kisasa ya henna, makaburi ya muda.</span>
                     </p>
-                    <div class="service-tags">
-                        <span class="service-tag english">Personal Styling</span>
-                        <span class="service-tag english">Tailoring</span>
-                        <span class="service-tag english">Accessories</span>
-                        <span class="service-tag swahili">Mitindo ya Kibinafsi</span>
-                        <span class="service-tag swahili">Ushonaji</span>
-                        <span class="service-tag swahili">Vifaa</span>
-                    </div>
                 </div>
                 
-                <!-- Event & Bridal Services -->
-                <div class="category-card" onclick="window.location.href='#book'">
-                    <div class="category-icon">
-                        <i class="fas fa-ring"></i>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
                     </div>
-                    <h3 class="category-title">
-                        <span class="english">Event & Bridal Services</span>
-                        <span class="swahili">Huduma za Matukio na Harusi</span>
+                    <h3 class="feature-title">
+                        <span class="english">Barber Services</span>
+                        <span class="swahili">Huduma za Kinyozi</span>
                     </h3>
-                    <p class="category-description">
-                        <span class="english">Bridal packages, henna, temporary tattoos, event styling, and wedding coordination.</span>
-                        <span class="swahili">Vifurushi vya harusi, henna, makunjo ya muda mfupi, mitindo ya matukio, na uratibu wa harusi.</span>
+                    <p class="feature-description">
+                        <span class="english">Professional barber services for men's grooming and styling.</span>
+                        <span class="swahili">Huduma za kitaalamu za kinyozi kwa usafi na mitindo ya wanaume.</span>
                     </p>
-                    <div class="service-tags">
-                        <span class="service-tag english">Bridal Packages</span>
-                        <span class="service-tag english">Henna</span>
-                        <span class="service-tag english">Event Styling</span>
-                        <span class="service-tag swahili">Vifurushi vya Harusi</span>
-                        <span class="service-tag swahili">Henna</span>
-                        <span class="service-tag swahili">Mitindo ya Matukio</span>
-                    </div>
-                </div>
-                
-                <!-- Beauty Products Marketplace -->
-                <div class="category-card" onclick="window.location.href='#book'">
-                    <div class="category-icon">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
-                    <h3 class="category-title">
-                        <span class="english">Beauty Products Marketplace</span>
-                        <span class="swahili">Sokoni la Bidhaa za Urembo</span>
-                    </h3>
-                    <p class="category-description">
-                        <span class="english">Cosmetics, skincare, haircare products, professional tools, and Tanzanian-made beauty products.</span>
-                        <span class="swahili">Vipodozi, bidhaa za ngozi, bidhaa za nywele, zana za kitaalamu, na bidhaa za urembo za Kitanzania.</span>
-                    </p>
-                    <div class="service-tags">
-                        <span class="service-tag english">Tanzanian Products</span>
-                        <span class="service-tag english">Professional Tools</span>
-                        <span class="service-tag english">Organic Beauty</span>
-                        <span class="service-tag swahili">Bidhaa za Kitanzania</span>
-                        <span class="service-tag swahili">Zana za Kitaalamu</span>
-                        <span class="service-tag swahili">Urembo wa Asili</span>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Booking CTA -->
-    <section class="section" style="background: rgba(212, 175, 55, 0.02);">
-        <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 style="font-size: 36px; margin-bottom: 20px; color: var(--white);">
-                    <span class="english">Ready to Book Your Beauty Service?</span>
-                    <span class="swahili">Uko Tayari Kufanya Maagizo ya Huduma yako ya Urembo?</span>
-                </h2>
-                <p style="color: var(--gray); margin-bottom: 40px; font-size: 18px;">
-                    <span class="english">Discover Tanzania's finest beauty professionals and book your appointment in minutes.</span>
-                    <span class="swahili">Gundua wataalamu bora wa urembo Tanzania na fanya maagizo yako kwa dakika chache.</span>
-                </p>
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <button class="cta-button" onclick="window.location.href='contact.html'">
-                        <i class="fas fa-calendar-check"></i>
-                        <span class="english">Book Now</span>
-                        <span class="swahili">Fanya Maagizo Sasa</span>
-                    </button>
-                    <button class="secondary-button" onclick="window.location.href='features.html'">
-                        <span class="english">View Features</span>
-                        <span class="swahili">Angalia Vipengele</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Footer (same as index.html) -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Salooni Verse</h3>
                     <p style="margin-bottom: 20px; color: #ccc;">
-                        <span class="english">Your luxury beauty universe in Tanzania. Connecting discerning clients with premium beauty professionals.</span>
-                        <span class="swahili">Ulimwengu wako wa urembo wa kifahari Tanzania. Kuunganisha wateja wanaotambua na wataalamu wa urembo wa hali ya juu.</span>
+                        <span class="english">Your luxury beauty universe in Tanzania.</span>
+                        <span class="swahili">Ulimwengu wako wa urembo wa kifahari Tanzania.</span>
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -318,24 +193,10 @@
                 
                 <div class="footer-column">
                     <h3>
-                        <span class="english">Top Categories</span>
-                        <span class="swahili">Aina Bora</span>
-                    </h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Hair Services</span><span class="swahili">Huduma za Nywele</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Makeup Artistry</span><span class="swahili">Usanii wa Make-up</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Nail Design</span><span class="swahili">Ubunifu wa Kucha</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Skincare</span><span class="swahili">Utunzaji wa Ngozi</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Bridal Packages</span><span class="swahili">Vifurushi vya Harusi</span></a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>
                         <span class="english">Contact Info</span>
                         <span class="swahili">Taarifa za Mawasiliano</span>
                     </h3>
-                    <div class="info-card" style="margin-bottom: 20px;">
+                    <div class="info-card">
                         <div class="info-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
@@ -364,25 +225,13 @@
             
             <div class="footer-bottom">
                 <p>
-                    <span class="english">&copy; 2023 Salooni Verse. All rights reserved. | Luxury Beauty Universe for Tanzania</span>
-                    <span class="swahili">&copy; 2023 Salooni Verse. Haki zote zimehifadhiwa. | Ulimwengu wa Urembo wa Kifahari kwa Tanzania</span>
+                    <span class="english">&copy; 2023 Salooni Verse. All rights reserved.</span>
+                    <span class="swahili">&copy; 2023 Salooni Verse. Haki zote zimehifadhiwa.</span>
                 </p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Booking function for category cards
-        document.querySelectorAll('.category-card').forEach(card => {
-            card.addEventListener('click', function() {
-                if (localStorage.getItem('salooni-language') === 'sw') {
-                    alert('✨ Fungua programu yetu au tembelea ukurasa wetu wa mawasiliano kufanya maagizo ya huduma hii ya urembo!');
-                } else {
-                    alert('✨ Open our app or visit our contact page to book this beauty service!');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
