@@ -29,18 +29,20 @@
                 </ul>
                 
                 <div class="header-right">
-                    <div class="language-switcher">
+                    <div class="language-switcher" id="languageSwitcher">
                         <i class="fas fa-globe"></i>
-                        <span>EN</span>
+                        <span class="lang-text">EN</span>
                     </div>
-                    <button class="cta-button">
+                    <button class="cta-button" id="downloadApp">
                         <i class="fas fa-download"></i>
                         <span class="english">Download App</span>
                         <span class="swahili">Pakua Programu</span>
                     </button>
-                    <div class="mobile-toggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -50,245 +52,246 @@
     <section class="hero" style="padding: 180px 0 80px;">
         <div class="container">
             <div class="section-title">
-                <div class="section-subtitle english">Our Story</div>
-                <div class="section-subtitle swahili">Hadithi Yetu</div>
-                <h2 class="section-main-title english">Redefining Beauty in Tanzania</h2>
-                <h2 class="section-main-title swahili">Kubadilisha Urembo Tanzania</h2>
-                <p class="section-description english">
-                    Salooni Verse is more than an app—it's a full-fledged beauty ecosystem transforming the traditional beauty experience.
-                </p>
-                <p class="section-description swahili">
-                    Salooni Verse ni zaidi ya programu—ni mfumo kamili wa urembo unaobadilisha uzoefu wa kawaida wa urembo.
+                <div class="section-subtitle">
+                    <span class="english">Our Story</span>
+                    <span class="swahili">Hadithi Yetu</span>
+                </div>
+                <h1 class="section-main-title">
+                    <span class="english">Redefining Beauty in Tanzania</span>
+                    <span class="swahili">Kufafanua Urembo Tanzania</span>
+                </h1>
+                <p class="section-description">
+                    <span class="english">Salooni Verse is more than a platform—it's a revolution in how Tanzania experiences beauty services.</span>
+                    <span class="swahili">Salooni Verse si jukwaa tu—ni mapinduzi katika jinsi Tanzania inavyopata huduma za urembo.</span>
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Mission & Vision -->
-    <section class="section">
+    <section class="section" style="padding: 80px 0;">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="about-mission english">
-                        Salooni Verse is a revolutionary beauty marketplace designed for Tanzania, connecting clients with professional beauty service providers in a seamless, interactive, and highly personalized way.
-                    </div>
-                    <div class="about-mission swahili">
-                        Salooni Verse ni soko la urembo la kimapinduzi lililobuniwa kwa ajili ya Tanzania, likiunganisha wateja na watoa huduma wa urembo wa kikazi kwa njia laini, ya kuingiliana, na ya kibinafsi sana.
-                    </div>
-                    
-                    <p class="about-details english">
-                        Unlike traditional salon apps, Salooni Verse provides a comprehensive platform where beauty professionals can showcase their work, sell products, offer tutorials, and connect directly with clients. We aim to democratize access to beauty services, giving street stylists and independent artists visibility while allowing clients to easily find, book, and pay for services in one place.
-                    </p>
-                    <p class="about-details swahili">
-                        Tofauti na programu za kawaida za saluni, Salooni Verse hutoa jukwaa kamili ambapo wataalamu wa urembo wanaweza kuonyesha kazi zao, kuuza bidhaa, kutoa mafunzo, na kuunganisha moja kwa moja na wateja. Tunakusudia kuleta usawa katika upatikanaji wa huduma za urembo, kuwapa wakinyozi wa mitaani na wasanii huru umaarufu huku wakiwaruhusu wateja kupata, kufanya maagizo, na kulipa huduma kwa urahisi katika sehemu moja.
-                    </p>
-                    
-                    <div class="standout-list">
-                        <h3 class="english" style="color: var(--gold); margin-bottom: 25px; font-size: 24px;">Why We Stand Out</h3>
-                        <h3 class="swahili" style="color: var(--gold); margin-bottom: 25px; font-size: 24px;">Kwa Nini Tunajitokeza</h3>
-                        
-                        <li>
-                            <i class="fas fa-crown"></i>
-                            <div>
-                                <strong class="english">Inclusivity:</strong> Combines both salon and street-level professionals
-                                <strong class="swahili">Uwiano:</strong> Inachanganya wataalamu wa saluni na wa mitaani
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-robot"></i>
-                            <div>
-                                <strong class="english">Personalization:</strong> AI-driven recommendations and virtual try-ons
-                                <strong class="swahili">Ubinafsishaji:</strong> Mapendekezo yanayotokana na AI na kujaribu mtandaoni
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <strong class="english">Education & Skill Development:</strong> Tutorials and paid courses for growth
-                                <strong class="swahili">Elimu na Ukuzaji wa Ujuzi:</strong> Mafunzo na kozi za malipo kwa ajili ya ukuaji
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-shopping-bag"></i>
-                            <div>
-                                <strong class="english">E-commerce Integration:</strong> Beauty products sold directly on the platform
-                                <strong class="swahili">Ujumuishaji wa Biashara ya Elektroniki:</strong> Bidhaa za urembo zinauzwa moja kwa moja kwenye jukwaa
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-users"></i>
-                            <div>
-                                <strong class="english">Community & Engagement:</strong> Social features create loyalty and repeat use
-                                <strong class="swahili">Jamii na Ushiriki:</strong> Vipengele vya kijamii huunda uaminifu na matumizi ya mara kwa mara
-                            </div>
-                        </li>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="section" style="background: rgba(212, 175, 55, 0.02);">
-        <div class="container">
-            <div class="section-title">
-                <div class="section-subtitle english">Our Principles</div>
-                <div class="section-subtitle swahili">Kanuni Zetu</div>
-                <h2 class="section-main-title english">Core Values</h2>
-                <h2 class="section-main-title swahili">Thamani za Msingi</h2>
-            </div>
-            
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold);">
-                        <i class="fas fa-heart"></i>
+                    <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1);">
+                        <i class="fas fa-bullseye"></i>
                     </div>
-                    <h3 class="feature-title english">Empowerment</h3>
-                    <h3 class="feature-title swahili">Kuwawezesha</h3>
-                    <p class="feature-description english">
-                        We empower beauty professionals across Tanzania by providing them with tools, visibility, and opportunities to grow their businesses.
-                    </p>
-                    <p class="feature-description swahili">
-                        Tunawawezesha wataalamu wa urembo kote Tanzania kwa kuwapa zana, umaarufu, na fursa za kukuza biashara zao.
+                    <h3 class="feature-title">
+                        <span class="english">Our Mission</span>
+                        <span class="swahili">Dhamira Yetu</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">To create a seamless bridge between beauty professionals and clients, elevating the beauty industry in Tanzania through technology, trust, and exceptional service.</span>
+                        <span class="swahili">Kuunda daraja laini kati ya wataalamu wa urembo na wateja, kuinua tasnia ya urembo Tanzania kupitia teknolojia, uaminifu, na huduma bora.</span>
                     </p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold);">
-                        <i class="fas fa-star"></i>
+                    <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1);">
+                        <i class="fas fa-eye"></i>
                     </div>
-                    <h3 class="feature-title english">Excellence</h3>
-                    <h3 class="feature-title swahili">Ubora</h3>
-                    <p class="feature-description english">
-                        We're committed to delivering exceptional quality in every service and interaction on our platform.
-                    </p>
-                    <p class="feature-description swahili">
-                        Tumejikita katika kutoa ubora wa kipekee katika kila huduma na mwingiliano kwenye jukwaa letu.
+                    <h3 class="feature-title">
+                        <span class="english">Our Vision</span>
+                        <span class="swahili">Maono Yetu</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">To become Tanzania's leading digital beauty ecosystem, where every beauty need is met with excellence, innovation, and cultural relevance.</span>
+                        <span class="swahili">Kuwa mfumo wa kidijitali unaoongoza wa urembo Tanzania, ambapo kila hitaji la urembo linakidhiwa kwa ubora, ubunifu, na umuhimu wa kitamaduni.</span>
                     </p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold);">
+                    <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1);">
                         <i class="fas fa-handshake"></i>
                     </div>
-                    <h3 class="feature-title english">Inclusivity</h3>
-                    <h3 class="feature-title swahili">Uwiano</h3>
-                    <p class="feature-description english">
-                        We celebrate diversity and create equal opportunities for all beauty professionals, from salon owners to street stylists.
-                    </p>
-                    <p class="feature-description swahili">
-                        Tunashangilia utofauti na kuunda fursa sawa kwa wataalamu wote wa urembo, kutoka kwa wamiliki wa saluni hadi wakinyozi wa mitaani.
-                    </p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold);">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3 class="feature-title english">Innovation</h3>
-                    <h3 class="feature-title swahili">Ubunifu</h3>
-                    <p class="feature-description english">
-                        We continuously innovate to enhance the beauty experience through technology and creative solutions.
-                    </p>
-                    <p class="feature-description swahili">
-                        Tunaendelea kubuni ili kuboresha uzoefu wa urembo kupitia teknolojia na suluhu za ubunifu.
-                    </p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold);">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="feature-title english">Community</h3>
-                    <h3 class="feature-title swahili">Jamii</h3>
-                    <p class="feature-description english">
-                        We build a supportive community where beauty professionals and clients connect, share, and grow together.
-                    </p>
-                    <p class="feature-description swahili">
-                        Tunajenga jamii ya kusaidia ambapo wataalamu wa urembo na wateja wanaungana, kushiriki, na kukua pamoja.
-                    </p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold);">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="feature-title english">Trust</h3>
-                    <h3 class="feature-title swahili">Imami</h3>
-                    <p class="feature-description english">
-                        We prioritize safety, security, and transparency in all interactions on our platform.
-                    </p>
-                    <p class="feature-description swahili">
-                        Tunapendelea usalama, ulinzi, na uwazi katika mwingiliano wote kwenye jukwaa letu.
+                    <h3 class="feature-title">
+                        <span class="english">Our Values</span>
+                        <span class="swahili">Maadili Yetu</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Excellence, Innovation, Trust, Community Empowerment, and Cultural Pride guide everything we do at Salooni Verse.</span>
+                        <span class="swahili">Ubora, Ubunifu, Uaminifu, Uwezeshaji wa Jamii, na Majivuno ya Kitamaduni yanatuongoza katika kila tunachofanya Salooni Verse.</span>
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Impact Section -->
-    <section class="section">
+    <!-- Our Story -->
+    <section class="section" style="background: rgba(212, 175, 55, 0.02); padding: 100px 0;">
         <div class="container">
             <div class="section-title">
-                <div class="section-subtitle english">Making a Difference</div>
-                <div class="section-subtitle swahili">Kufanya Tofauti</div>
-                <h2 class="section-main-title english">Our Impact</h2>
-                <h2 class="section-main-title swahili">Athari Yetu</h2>
+                <h2 class="section-main-title">
+                    <span class="english">The Genesis of Salooni Verse</span>
+                    <span class="swahili">Chanzo cha Salooni Verse</span>
+                </h2>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="feature-card" style="background: transparent; border: 1px solid rgba(212, 175, 55, 0.2);">
+                    <p class="feature-description" style="font-size: 18px; line-height: 1.8; text-align: left;">
+                        <span class="english">
+                            Founded in 2023, Salooni Verse emerged from a simple observation: Tanzania's vibrant beauty industry was fragmented, with talented professionals struggling to reach clients and clients facing difficulties finding reliable services. Our founders, a team of tech enthusiasts and beauty industry veterans, envisioned a platform that would revolutionize this space.
+                            <br><br>
+                            We started with a mission to digitize and elevate Tanzania's beauty sector. Today, we connect thousands of beauty professionals with clients across Dar es Salaam, Arusha, Mwanza, and beyond. Our platform combines cutting-edge technology with deep understanding of local beauty traditions and modern trends.
+                            <br><br>
+                            What sets us apart is our commitment to both luxury and accessibility. We celebrate traditional techniques while embracing innovation, creating a unique ecosystem where street stylists and high-end salons coexist and thrive.
+                        </span>
+                        <span class="swahili">
+                            Ilianzishwa mwaka 2023, Salooni Verse ilitokana na uchunguzi rahisi: tasnia ya urembo iliyochanganyikiwa ya Tanzania, na wataalamu wenye vipaji wakipambana kufikia wateja na wateja wakikabili shida ya kupata huduma za kuaminika. Waanzilishi wetu, timu ya wapenzi wa teknolojia na wakongwe wa tasnia ya urembo, walitazama jukwaa ambalo lingebadilisha nafasi hii.
+                            <br><br>
+                            Tulianza kwa dhamira ya kudijitalisha na kuinua sekta ya urembo ya Tanzania. Leo, tunaunganisha maelfu ya wataalamu wa urembo na wateja kote Dar es Salaam, Arusha, Mwanza, na zaidi. Jukwaa letu linaunganisha teknolojia ya kisasa na uelewa wa kina wa mila za urembo za kienyeji na mitindo ya kisasa.
+                            <br><br>
+                            Kinachotutofautisha ni ushirikiano wetu kwa anasa na upatikanaji. Tunasisitiza mbinu za kitamaduni huku tukikumbatia ubunifu, na kuunda mfumo wa kipekee ambapo wakinyozi wa mitaani na saluni za hali ya juu wanaishi pamoja na kustawi.
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section" style="padding: 100px 0;">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-subtitle">
+                    <span class="english">Leadership</span>
+                    <span class="swahili">Uongozi</span>
+                </div>
+                <h2 class="section-main-title">
+                    <span class="english">Meet Our Founders</span>
+                    <span class="swahili">Jumuika na Waanzilishi Wetu</span>
+                </h2>
             </div>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold);">
-                        <i class="fas fa-chart-line"></i>
+                    <div class="feature-icon" style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 25px; background: rgba(212, 175, 55, 0.1); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-user-tie" style="font-size: 40px;"></i>
                     </div>
-                    <h3 class="feature-title english">Economic Empowerment</h3>
-                    <h3 class="feature-title swahili">Kuwawezesha Kiuchumi</h3>
-                    <p class="feature-description english">
-                        Creating sustainable income opportunities for thousands of beauty professionals across Tanzania.
+                    <h3 class="feature-title">
+                        <span class="english">Sarah M.</span>
+                        <span class="swahili">Sarah M.</span>
+                    </h3>
+                    <p class="feature-description" style="color: var(--gold); font-weight: 500;">
+                        <span class="english">CEO & Co-Founder</span>
+                        <span class="swahili">Mkurugenzi Mtendaji na Mwanzilishi</span>
                     </p>
-                    <p class="feature-description swahili">
-                        Kuunda fursa endelevu za mapato kwa maelfu ya wataalamu wa urembo kote Tanzania.
+                    <p class="feature-description">
+                        <span class="english">Former beauty industry executive with 15+ years experience bridging technology and beauty services.</span>
+                        <span class="swahili">Mkurugenzi wa zamani wa tasnia ya urembo na uzoefu wa zaidi ya miaka 15 katika kuunganisha teknolojia na huduma za urembo.</span>
                     </p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold);">
-                        <i class="fas fa-graduation-cap"></i>
+                    <div class="feature-icon" style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 25px; background: rgba(212, 175, 55, 0.1); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-laptop-code" style="font-size: 40px;"></i>
                     </div>
-                    <h3 class="feature-title english">Skill Development</h3>
-                    <h3 class="feature-title swahili">Ukuzaji wa Ujuzi</h3>
-                    <p class="feature-description english">
-                        Providing access to training and education to elevate professional standards in the beauty industry.
+                    <h3 class="feature-title">
+                        <span class="english">James K.</span>
+                        <span class="swahili">James K.</span>
+                    </h3>
+                    <p class="feature-description" style="color: var(--gold); font-weight: 500;">
+                        <span class="english">CTO & Co-Founder</span>
+                        <span class="swahili">Mkurugenzi wa Teknolojia na Mwanzilishi</span>
                     </p>
-                    <p class="feature-description swahili">
-                        Kutoa ufikiaji wa mafunzo na elimu ili kuinua viwango vya kitaalamu katika tasnia ya urembo.
+                    <p class="feature-description">
+                        <span class="english">Tech innovator specializing in AI and mobile platforms, passionate about African tech solutions.</span>
+                        <span class="swahili">Mbunifu wa teknolojia anayejishughulisha na AI na majukwaa ya rununu, mwenye shauku kuhusu suluhisho za kiteknolojia za Kiafrika.</span>
                     </p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold);">
-                        <i class="fas fa-globe-africa"></i>
+                    <div class="feature-icon" style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 25px; background: rgba(212, 175, 55, 0.1); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-users" style="font-size: 40px;"></i>
                     </div>
-                    <h3 class="feature-title english">Digital Transformation</h3>
-                    <h3 class="feature-title swahili">Mabadiliko ya Kidijitali</h3>
-                    <p class="feature-description english">
-                        Bringing traditional beauty services into the digital age with innovative technology solutions.
+                    <h3 class="feature-title">
+                        <span class="english">Amina R.</span>
+                        <span class="swahili">Amina R.</span>
+                    </h3>
+                    <p class="feature-description" style="color: var(--gold); font-weight: 500;">
+                        <span class="english">Head of Community</span>
+                        <span class="swahili">Mkuu wa Jamii</span>
                     </p>
-                    <p class="feature-description swahili">
-                        Kuleta huduma za kawaida za urembo katika enzi ya kidijitali na suluhu za teknolojia za ubunifu.
+                    <p class="feature-description">
+                        <span class="english">Beauty community advocate connecting traditional stylists with digital opportunities.</span>
+                        <span class="swahili">Mtetezi wa jamii ya urembo anayeunganisha wakinyozi wa kitamaduni na fursa za kidijitali.</span>
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Milestones -->
+    <section class="section" style="background: rgba(212, 175, 55, 0.05); padding: 100px 0;">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-subtitle">
+                    <span class="english">Our Journey</span>
+                    <span class="swahili">Safari Yetu</span>
+                </div>
+                <h2 class="section-main-title">
+                    <span class="english">Milestones & Achievements</span>
+                    <span class="swahili">Viashiria na Mafanikio</span>
+                </h2>
+            </div>
             
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="contact.html" class="cta-button english">
-                    <i class="fas fa-handshake"></i>
-                    Partner With Us
-                </a>
-                <a href="contact.html" class="cta-button swahili">
-                    <i class="fas fa-handshake"></i>
-                    Shiriki Nasi
-                </a>
+            <div class="features-grid">
+                <div class="feature-card" style="text-align: center;">
+                    <h1 class="section-main-title" style="font-size: 48px; color: var(--gold); margin-bottom: 10px;">
+                        2,500+
+                    </h1>
+                    <h3 class="feature-title">
+                        <span class="english">Beauty Professionals</span>
+                        <span class="swahili">Wataalamu wa Urembo</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Registered on our platform across Tanzania</span>
+                        <span class="swahili">Wamesajiliwa kwenye jukwaa letu kote Tanzania</span>
+                    </p>
+                </div>
+                
+                <div class="feature-card" style="text-align: center;">
+                    <h1 class="section-main-title" style="font-size: 48px; color: var(--gold); margin-bottom: 10px;">
+                        15,000+
+                    </h1>
+                    <h3 class="feature-title">
+                        <span class="english">Satisfied Clients</span>
+                        <span class="swahili">Wateja Walioridhika</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Booked services through Salooni Verse</span>
+                        <span class="swahili">Wamepanga huduma kupitia Salooni Verse</span>
+                    </p>
+                </div>
+                
+                <div class="feature-card" style="text-align: center;">
+                    <h1 class="section-main-title" style="font-size: 48px; color: var(--gold); margin-bottom: 10px;">
+                        6
+                    </h1>
+                    <h3 class="feature-title">
+                        <span class="english">Cities</span>
+                        <span class="swahili">Miji</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Operating across major Tanzanian cities</span>
+                        <span class="swahili">Inafanya kazi katika miji mikuu ya Tanzania</span>
+                    </p>
+                </div>
+                
+                <div class="feature-card" style="text-align: center;">
+                    <h1 class="section-main-title" style="font-size: 48px; color: var(--gold); margin-bottom: 10px;">
+                        98%
+                    </h1>
+                    <h3 class="feature-title">
+                        <span class="english">Satisfaction Rate</span>
+                        <span class="swahili">Kiwango cha Kuridhika</span>
+                    </h3>
+                    <p class="feature-description">
+                        <span class="english">Client satisfaction with our platform</span>
+                        <span class="swahili">Kuridhika kwa wateja na jukwaa letu</span>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -299,11 +302,9 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Salooni Verse</h3>
-                    <p class="english" style="margin-bottom: 20px;">
-                        Your luxury beauty universe in Tanzania. Connecting discerning clients with premium beauty professionals.
-                    </p>
-                    <p class="swahili" style="margin-bottom: 20px;">
-                        Ulimwengu wako wa urembo wa kifahari Tanzania. Kuunganisha wateja wanaotambua na wataalamu wa urembo wa hali ya juu.
+                    <p style="margin-bottom: 20px; color: #ccc;">
+                        <span class="english">Your luxury beauty universe in Tanzania. Connecting discerning clients with premium beauty professionals.</span>
+                        <span class="swahili">Ulimwengu wako wa urembo wa kifahari Tanzania. Kuunganisha wateja wanaotambua na wataalamu wa urembo wa hali ya juu.</span>
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -314,8 +315,10 @@
                 </div>
                 
                 <div class="footer-column">
-                    <h3 class="english">Quick Links</h3>
-                    <h3 class="swahili">Viungo vya Haraka</h3>
+                    <h3>
+                        <span class="english">Quick Links</span>
+                        <span class="swahili">Viungo vya Haraka</span>
+                    </h3>
                     <ul class="footer-links">
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span class="english">Home</span><span class="swahili">Nyumbani</span></a></li>
                         <li><a href="categories.html"><i class="fas fa-chevron-right"></i> <span class="english">Categories</span><span class="swahili">Aina</span></a></li>
@@ -326,29 +329,33 @@
                 </div>
                 
                 <div class="footer-column">
-                    <h3 class="english">Our Values</h3>
-                    <h3 class="swahili">Thamani Zetu</h3>
+                    <h3>
+                        <span class="english">Our Commitment</span>
+                        <span class="swahili">Ahadi Yetu</span>
+                    </h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Empowerment</span><span class="swahili">Kuwawezesha</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Excellence</span><span class="swahili">Ubora</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Inclusivity</span><span class="swahili">Uwiano</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Innovation</span><span class="swahili">Ubunifu</span></a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Community</span><span class="swahili">Jamii</span></a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Quality Assurance</span><span class="swahili">Hakikisho la Ubora</span></a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Community Support</span><span class="swahili">Msaada wa Jamii</span></a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">Secure Payments</span><span class="swahili">Malipo Salama</span></a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> <span class="english">24/7 Support</span><span class="swahili">Msaada wa Saa 24</span></a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3 class="english">Contact Info</h3>
-                    <h3 class="swahili">Taarifa za Mawasiliano</h3>
+                    <h3>
+                        <span class="english">Contact Info</span>
+                        <span class="swahili">Taarifa za Mawasiliano</span>
+                    </h3>
                     <div class="info-card" style="margin-bottom: 20px;">
                         <div class="info-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="info-content">
-                            <h4 class="english">Location</h4>
-                            <h4 class="swahili">Eneo</h4>
-                            <p class="english">Dar es Salaam, Tanzania</p>
-                            <p class="swahili">Dar es Salaam, Tanzania</p>
+                            <h4>
+                                <span class="english">Location</span>
+                                <span class="swahili">Eneo</span>
+                            </h4>
+                            <p style="color: #ccc;">Dar es Salaam, Tanzania</p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -356,22 +363,25 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="info-content">
-                            <h4 class="english">Email</h4>
-                            <h4 class="swahili">Barua Pepe</h4>
-                            <p class="english">info@salooniverse.co.tz</p>
-                            <p class="swahili">info@salooniverse.co.tz</p>
+                            <h4>
+                                <span class="english">Email</span>
+                                <span class="swahili">Barua Pepe</span>
+                            </h4>
+                            <p style="color: #ccc;">info@salooniverse.co.tz</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="english">&copy; 2023 Salooni Verse. All rights reserved. | Luxury Beauty Universe for Tanzania</p>
-                    <p class="swahili">&copy; 2023 Salooni Verse. Haki zote zimehifadhiwa. | Ulimwengu wa Urembo wa Kifahari kwa Tanzania</p>
-                </div>
+                <p>
+                    <span class="english">&copy; 2023 Salooni Verse. All rights reserved. | Luxury Beauty Universe for Tanzania</span>
+                    <span class="swahili">&copy; 2023 Salooni Verse. Haki zote zimehifadhiwa. | Ulimwengu wa Urembo wa Kifahari kwa Tanzania</span>
+                </p>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <script src="script.js"></script>
-    </body>
-    </html>
+    <script src="script.js"></script>
+</body>
+</html>
